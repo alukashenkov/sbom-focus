@@ -1,0 +1,55 @@
+{{/*
+  grype-package-summary.tmpl  –  compact package summary with ANSI colors
+  Sorted by: Critical desc, then High desc
+  Usage: grype <target> -o template -t grype-package-summary.tmpl
+*/}}
+{{- $reset := printf "\033[0m"    }}
+{{- $cyan  := printf "\033[1;36m" }}
+{{- $crit  := printf "\033[1;31m" }}
+{{- $high  := printf "\033[31m"   }}
+{{- $med   := printf "\033[33m"   }}
+{{- $low   := printf "\033[34m"   }}
+{{- $neg   := printf "\033[90m"   }}
+{{- $dim   := printf "\033[2m"    }}
+{{- $order := list "Critical" "High" "Medium" "Low" "Negligible" "Unknown" }}
+{{/* ── pass 1: collect unique packages + deduplicated vulns ── */}}
+{{- $packages := dict }}
+{{- range .Matches }}
+  {{- $key := printf "%s@%s" .Artifact.Name .Artifact.Version }}
+  {{- if not (index $packages $key) }}
+    {{- $_ := set $packages $key (dict "name" .Artifact.Name "version" .Artifact.Version "vulnMap" dict) }}
+  {{- end }}
+  {{- $pkg := index $packages $key }}
+  {{- $vid := .Vulnerability.ID }}
+  {{- if not (index (index $pkg "vulnMap") $vid) }}
+    {{- $_ := set (index $pkg "vulnMap") $vid (dict "severity" .Vulnerability.Severity "fixState" .Vulnerability.Fix.State) }}
+  {{- end }}
+{{- end }}
+{{/* ── pass 2: build sort keys (inverted counts → sortAlpha gives descending) ── */}}
+{{- $sortKeys := list }}
+{{- range $key, $pkg := $packages }}
+  {{- $cr := 0 }}{{- $hi := 0 }}
+  {{- range index $pkg "vulnMap" }}
+    {{- if eq .severity "Critical" }}{{ $cr = add $cr 1 }}{{ end }}
+    {{- if eq .severity "High"     }}{{ $hi = add $hi 1 }}{{ end }}
+  {{- end }}
+  {{- $sortKeys = append $sortKeys (printf "%06d%06d|%s" (sub 999999 $cr) (sub 999999 $hi) $key) }}
+{{- end }}
+{{- $sortKeys = sortAlpha $sortKeys }}
+{{/* ── pass 3: render in sorted order ── */}}
+{{- range $sortKeys }}
+  {{- $parts := splitList "|" . }}
+  {{- $key   := last $parts }}
+  {{- $pkg   := index $packages $key }}
+  {{- $counts := dict "Critical" 0 "High" 0 "Medium" 0 "Low" 0 "Negligible" 0 "Unknown" 0 }}
+  {{- $fixable := 0 }}
+  {{- range index $pkg "vulnMap" }}
+    {{- $sev := .severity }}
+    {{- if not (hasKey $counts $sev) }}{{ $sev = "Unknown" }}{{ end }}
+    {{- $_ := set $counts $sev (add (index $counts $sev) 1) }}
+    {{- if eq .fixState "fixed" }}{{ $fixable = add $fixable 1 }}{{ end }}
+  {{- end }}
+  {{- $total := len (index $pkg "vulnMap") }}
+{{ $cyan }}{{ index $pkg "name" }} {{ index $pkg "version" }}{{ $reset }}  {{ $dim }}{{ $total }} unique ({{ $fixable }} fixable){{ $reset }}
+{{ $dim }}severity:{{ $reset }}{{ range $order }}{{ $c := index $counts . }}{{ if gt $c 0 }}  {{ if eq . "Critical" }}{{ $crit }}{{ else if eq . "High" }}{{ $high }}{{ else if eq . "Medium" }}{{ $med }}{{ else if eq . "Low" }}{{ $low }}{{ else }}{{ $neg }}{{ end }}{{ . }}={{ $c }}{{ $reset }}{{ end }}{{ end }}
+{{ end }}

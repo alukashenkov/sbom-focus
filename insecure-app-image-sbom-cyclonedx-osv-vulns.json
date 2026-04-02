@@ -1,0 +1,6364 @@
+{
+  "meta": {
+    "tool": "query_osv_purl",
+    "sbomFile": "insecure-app-image-sbom-cyclonedx.json",
+    "created": "2026-04-02T09:39:38.816924",
+    "totalPackages": 535,
+    "affectedPackages": 51,
+    "totalAdvisories": 302,
+    "uniqueVulnerabilities": 246
+  },
+  "packages": [
+    {
+      "purl": "pkg:deb/ubuntu/adduser@3.118ubuntu2?arch=all&distro=ubuntu-20.04",
+      "name": "adduser",
+      "version": "3.118ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/apt@2.0.10?arch=amd64&distro=ubuntu-20.04",
+      "name": "apt",
+      "version": "2.0.10",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/apt-transport-https@2.0.11?arch=all&distro=ubuntu-20.04&upstream=apt",
+      "name": "apt-transport-https",
+      "version": "2.0.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/base-files@11ubuntu5.8?arch=amd64&distro=ubuntu-20.04",
+      "name": "base-files",
+      "version": "11ubuntu5.8",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/base-passwd@3.5.47?arch=amd64&distro=ubuntu-20.04",
+      "name": "base-passwd",
+      "version": "3.5.47",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/bash@5.0-6ubuntu1.2?arch=amd64&distro=ubuntu-20.04",
+      "name": "bash",
+      "version": "5.0-6ubuntu1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/binutils@2.34-6ubuntu1.11?arch=amd64&distro=ubuntu-20.04",
+      "name": "binutils",
+      "version": "2.34-6ubuntu1.11",
+      "uniqueVulnCount": 48,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2017-13716",
+          "cvss": 7.1,
+          "severity": "HIGH",
+          "epss": 0.00237,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2017-13716"
+          ]
+        },
+        {
+          "id": "CVE-2019-1010204",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00143,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2019-1010204"
+          ]
+        },
+        {
+          "id": "CVE-2021-20197",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.00115,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2021-20197"
+          ]
+        },
+        {
+          "id": "CVE-2022-48064",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 9e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2022-48064"
+          ]
+        },
+        {
+          "id": "CVE-2025-0840",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00101,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11081",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00026,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "USN-7919-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11082",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.00021,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11082",
+            "USN-7919-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11083",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.00024,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11083",
+            "USN-7919-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11412",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00026,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11412",
+            "USN-7919-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11413",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00025,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11413",
+            "USN-7919-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11414",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00026,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11414",
+            "USN-7919-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-1148",
+          "cvss": 3.1,
+          "severity": "LOW",
+          "epss": 0.00072,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1148"
+          ]
+        },
+        {
+          "id": "CVE-2025-1149",
+          "cvss": 3.1,
+          "severity": "LOW",
+          "epss": 0.00051,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1149"
+          ]
+        },
+        {
+          "id": "CVE-2025-11494",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00034,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11494",
+            "USN-7919-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11495",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00026,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11495",
+            "USN-7919-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-1150",
+          "cvss": 3.1,
+          "severity": "LOW",
+          "epss": 0.00048,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1150"
+          ]
+        },
+        {
+          "id": "CVE-2025-1151",
+          "cvss": 3.1,
+          "severity": "LOW",
+          "epss": 0.00078,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1151"
+          ]
+        },
+        {
+          "id": "CVE-2025-1152",
+          "cvss": 3.7,
+          "severity": "LOW",
+          "epss": 0.00051,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1152"
+          ]
+        },
+        {
+          "id": "CVE-2025-1153",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00087,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-1178",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.0012,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1178"
+          ]
+        },
+        {
+          "id": "CVE-2025-1180",
+          "cvss": 3.1,
+          "severity": "LOW",
+          "epss": 0.00082,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1180"
+          ]
+        },
+        {
+          "id": "CVE-2025-1181",
+          "cvss": 5.1,
+          "severity": "MEDIUM",
+          "epss": 0.00117,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1181",
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-1182",
+          "cvss": 5.1,
+          "severity": "MEDIUM",
+          "epss": 0.00104,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11839",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00017,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11839",
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-11840",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00028,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11840",
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-3198",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00068,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-3198",
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-5244",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.00081,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-5244",
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-5245",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.00084,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-5245",
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-66861",
+          "cvss": 2.5,
+          "severity": "LOW",
+          "epss": 0.00023,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-66861"
+          ]
+        },
+        {
+          "id": "CVE-2025-66862",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00076,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-66862"
+          ]
+        },
+        {
+          "id": "CVE-2025-66863",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00076,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-66863"
+          ]
+        },
+        {
+          "id": "CVE-2025-66864",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00049,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-66864"
+          ]
+        },
+        {
+          "id": "CVE-2025-66865",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00076,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-66865"
+          ]
+        },
+        {
+          "id": "CVE-2025-66866",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00016,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-66866"
+          ]
+        },
+        {
+          "id": "CVE-2025-69644",
+          "cvss": 5.0,
+          "severity": "MEDIUM",
+          "epss": 5e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69644"
+          ]
+        },
+        {
+          "id": "CVE-2025-69645",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 4e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69645"
+          ]
+        },
+        {
+          "id": "CVE-2025-69646",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 5e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69646"
+          ]
+        },
+        {
+          "id": "CVE-2025-69647",
+          "cvss": 6.2,
+          "severity": "MEDIUM",
+          "epss": 0.00016,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69647"
+          ]
+        },
+        {
+          "id": "CVE-2025-69648",
+          "cvss": 6.2,
+          "severity": "MEDIUM",
+          "epss": 0.00015,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69648"
+          ]
+        },
+        {
+          "id": "CVE-2025-69649",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.0003,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69649"
+          ]
+        },
+        {
+          "id": "CVE-2025-69650",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00101,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69650"
+          ]
+        },
+        {
+          "id": "CVE-2025-69651",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 5e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69651"
+          ]
+        },
+        {
+          "id": "CVE-2025-69652",
+          "cvss": 6.2,
+          "severity": "MEDIUM",
+          "epss": 0.00015,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69652"
+          ]
+        },
+        {
+          "id": "CVE-2025-7545",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.00023,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-7545",
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-8225",
+          "cvss": 4.8,
+          "severity": "MEDIUM",
+          "epss": 0.00024,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-8225",
+            "USN-7899-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-3441",
+          "cvss": 7.1,
+          "severity": "HIGH",
+          "epss": 5e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-3441"
+          ]
+        },
+        {
+          "id": "CVE-2026-3442",
+          "cvss": 7.1,
+          "severity": "HIGH",
+          "epss": 5e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-3442"
+          ]
+        },
+        {
+          "id": "CVE-2026-4647",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 0.00012,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-4647"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/binutils-common@2.34-6ubuntu1.11?arch=amd64&distro=ubuntu-20.04&upstream=binutils",
+      "name": "binutils-common",
+      "version": "2.34-6ubuntu1.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/binutils-x86-64-linux-gnu@2.34-6ubuntu1.11?arch=amd64&distro=ubuntu-20.04&upstream=binutils",
+      "name": "binutils-x86-64-linux-gnu",
+      "version": "2.34-6ubuntu1.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/blinker@1.8.2",
+      "name": "blinker",
+      "version": "1.8.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/bsdutils@1%3A2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04&upstream=util-linux%402.34-0.1ubuntu9.6",
+      "name": "bsdutils",
+      "version": "1%3A2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/build-essential@12.8ubuntu1.1?arch=amd64&distro=ubuntu-20.04",
+      "name": "build-essential",
+      "version": "12.8ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/bzip2@1.0.8-2?arch=amd64&distro=ubuntu-20.04",
+      "name": "bzip2",
+      "version": "1.0.8-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/ca-certificates@20240203~20.04.1?arch=all&distro=ubuntu-20.04",
+      "name": "ca-certificates",
+      "version": "20240203~20.04.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/certifi@2019.11.28",
+      "name": "certifi",
+      "version": "2019.11.28",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-23491",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00051,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-43fp-rhv2-5gv8",
+            "PYSEC-2022-42986"
+          ]
+        },
+        {
+          "id": "CVE-2023-37920",
+          "cvss": 9.8,
+          "severity": "CRITICAL",
+          "epss": 0.00112,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-xqr8-7jwr-rhp7",
+            "PYSEC-2023-135"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/cffi@1.17.1",
+      "name": "cffi",
+      "version": "1.17.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/chardet@3.0.4",
+      "name": "chardet",
+      "version": "3.0.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/click@8.1.8",
+      "name": "click",
+      "version": "8.1.8",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/coreutils@8.30-3ubuntu2?arch=amd64&distro=ubuntu-20.04",
+      "name": "coreutils",
+      "version": "8.30-3ubuntu2",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2016-2781",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00076,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2016-2781"
+          ]
+        },
+        {
+          "id": "CVE-2025-5278",
+          "cvss": 4.4,
+          "severity": "MEDIUM",
+          "epss": 0.00063,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-5278"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/cpp@4%3A9.3.0-1ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-defaults%401.185.1ubuntu2",
+      "name": "cpp",
+      "version": "4%3A9.3.0-1ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/cpp-9@9.4.0-1ubuntu1~20.04.2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-9",
+      "name": "cpp-9",
+      "version": "9.4.0-1ubuntu1~20.04.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/cryptography@3.3.2",
+      "name": "cryptography",
+      "version": "3.3.2",
+      "uniqueVulnCount": 10,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-0286",
+          "cvss": 7.4,
+          "severity": "HIGH",
+          "epss": 0.88474,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-x4qr-2fvf-3mr5"
+          ]
+        },
+        {
+          "id": "CVE-2023-23931",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00804,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-w7pp-m8wf-vj6r",
+            "PYSEC-2023-11"
+          ]
+        },
+        {
+          "id": "CVE-2023-49083",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.01289,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-jfhm-5ghh-2f97",
+            "PYSEC-2023-254"
+          ]
+        },
+        {
+          "id": "CVE-2023-50782",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00252,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-3ww4-gg4f-jr7f"
+          ]
+        },
+        {
+          "id": "CVE-2024-0727",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00236,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-9v9h-cgj8-h64p"
+          ]
+        },
+        {
+          "id": "CVE-2026-26007",
+          "cvss": 8.2,
+          "severity": "HIGH",
+          "epss": 9e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-r6ph-v2qm-q3c2"
+          ]
+        },
+        {
+          "id": "CVE-2026-34073",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.00023,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-m959-cc7f-wv43"
+          ]
+        },
+        {
+          "id": "GHSA-5cpq-8wj7-hf2v",
+          "cvss": null,
+          "severity": null,
+          "epss": null,
+          "wildExploited": false,
+          "sourceAdvisories": []
+        },
+        {
+          "id": "GHSA-jm77-qphf-c4w8",
+          "cvss": null,
+          "severity": null,
+          "epss": null,
+          "wildExploited": false,
+          "sourceAdvisories": []
+        },
+        {
+          "id": "GHSA-v8gr-m533-ghj9",
+          "cvss": null,
+          "severity": null,
+          "epss": null,
+          "wildExploited": false,
+          "sourceAdvisories": []
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/curl@7.68.0-1ubuntu2.25?arch=amd64&distro=ubuntu-20.04",
+      "name": "curl",
+      "version": "7.68.0-1ubuntu2.25",
+      "uniqueVulnCount": 7,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-14017",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 7e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-14017",
+            "USN-8062-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-14524",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00026,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-14524"
+          ]
+        },
+        {
+          "id": "CVE-2025-15079",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00035,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-15079",
+            "USN-8062-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-15224",
+          "cvss": 3.1,
+          "severity": "LOW",
+          "epss": 0.00084,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-15224",
+            "USN-8062-2"
+          ]
+        },
+        {
+          "id": "CVE-2026-1965",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00054,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-1965",
+            "USN-8099-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-3783",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00016,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-3783",
+            "USN-8099-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-3784",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00015,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-3784",
+            "USN-8099-1"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/dario.cat/mergo@v1.0.1",
+      "name": "mergo",
+      "version": "v1.0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dash@0.5.10.2-6?arch=amd64&distro=ubuntu-20.04",
+      "name": "dash",
+      "version": "0.5.10.2-6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dbus@1.12.16-2ubuntu2.3?arch=amd64&distro=ubuntu-20.04",
+      "name": "dbus",
+      "version": "1.12.16-2ubuntu2.3",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-34969",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00629,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2023-34969"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/dbus-python@1.2.16",
+      "name": "dbus-python",
+      "version": "1.2.16",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dbus-user-session@1.12.16-2ubuntu2.3?arch=amd64&distro=ubuntu-20.04&upstream=dbus",
+      "name": "dbus-user-session",
+      "version": "1.12.16-2ubuntu2.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dconf-gsettings-backend@0.36.0-1?arch=amd64&distro=ubuntu-20.04&upstream=dconf",
+      "name": "dconf-gsettings-backend",
+      "version": "0.36.0-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dconf-service@0.36.0-1?arch=amd64&distro=ubuntu-20.04&upstream=dconf",
+      "name": "dconf-service",
+      "version": "0.36.0-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/debconf@1.5.73?arch=all&distro=ubuntu-20.04",
+      "name": "debconf",
+      "version": "1.5.73",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/debianutils@4.9.1?arch=amd64&distro=ubuntu-20.04",
+      "name": "debianutils",
+      "version": "4.9.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/diffutils@1%3A3.7-3?arch=amd64&distro=ubuntu-20.04",
+      "name": "diffutils",
+      "version": "1%3A3.7-3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dirmngr@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "dirmngr",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/distro-info@0.23%2Bubuntu1.1",
+      "name": "distro-info",
+      "version": "0.23%2Bubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/distro-info-data@0.43ubuntu1.19?arch=all&distro=ubuntu-20.04",
+      "name": "distro-info-data",
+      "version": "0.43ubuntu1.19",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dmsetup@2%3A1.02.167-1ubuntu1?arch=amd64&distro=ubuntu-20.04&upstream=lvm2%402.03.07-1ubuntu1",
+      "name": "dmsetup",
+      "version": "2%3A1.02.167-1ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/docker-buildx-plugin@0.23.0-1~ubuntu.20.04~focal?arch=amd64&distro=ubuntu-20.04&upstream=docker-ce%405%3A28.1.1-1~ubuntu.20.04~focal",
+      "name": "docker-buildx-plugin",
+      "version": "0.23.0-1~ubuntu.20.04~focal",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/docker-ce-cli@5%3A28.1.1-1~ubuntu.20.04~focal?arch=amd64&distro=ubuntu-20.04&upstream=docker-ce",
+      "name": "docker-ce-cli",
+      "version": "5%3A28.1.1-1~ubuntu.20.04~focal",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/docker-compose-plugin@2.35.1-1~ubuntu.20.04~focal?arch=amd64&distro=ubuntu-20.04&upstream=docker-ce%405%3A28.1.1-1~ubuntu.20.04~focal",
+      "name": "docker-compose-plugin",
+      "version": "2.35.1-1~ubuntu.20.04~focal",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dpkg@1.19.7ubuntu3.2?arch=amd64&distro=ubuntu-20.04",
+      "name": "dpkg",
+      "version": "1.19.7ubuntu3.2",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-6297",
+          "cvss": 8.2,
+          "severity": "HIGH",
+          "epss": 0.00078,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-6297"
+          ]
+        },
+        {
+          "id": "CVE-2026-2219",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00021,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-2219"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/dpkg-dev@1.19.7ubuntu3.2?arch=all&distro=ubuntu-20.04&upstream=dpkg",
+      "name": "dpkg-dev",
+      "version": "1.19.7ubuntu3.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/e2fsprogs@1.45.5-2ubuntu1.2?arch=amd64&distro=ubuntu-20.04",
+      "name": "e2fsprogs",
+      "version": "1.45.5-2ubuntu1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/fakeroot@1.24-1?arch=amd64&distro=ubuntu-20.04",
+      "name": "fakeroot",
+      "version": "1.24-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/fdisk@2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04&upstream=util-linux",
+      "name": "fdisk",
+      "version": "2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/file@1%3A5.38-4?arch=amd64&distro=ubuntu-20.04",
+      "name": "file",
+      "version": "1%3A5.38-4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/findutils@4.7.0-1ubuntu1?arch=amd64&distro=ubuntu-20.04",
+      "name": "findutils",
+      "version": "4.7.0-1ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/flask@3.0.2",
+      "name": "flask",
+      "version": "3.0.2",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2026-27205",
+          "cvss": 4.3,
+          "severity": "MEDIUM",
+          "epss": 0.00011,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-68rp-wp8r-4726"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/g%2B%2B@4%3A9.3.0-1ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-defaults%401.185.1ubuntu2",
+      "name": "g%2B%2B",
+      "version": "4%3A9.3.0-1ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/g%2B%2B-9@9.4.0-1ubuntu1~20.04.2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-9",
+      "name": "g%2B%2B-9",
+      "version": "9.4.0-1ubuntu1~20.04.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gcc@4%3A9.3.0-1ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-defaults%401.185.1ubuntu2",
+      "name": "gcc",
+      "version": "4%3A9.3.0-1ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gcc-10-base@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "gcc-10-base",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gcc-9@9.4.0-1ubuntu1~20.04.2?arch=amd64&distro=ubuntu-20.04",
+      "name": "gcc-9",
+      "version": "9.4.0-1ubuntu1~20.04.2",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2020-23026",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00336,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2020-23026"
+          ]
+        },
+        {
+          "id": "CVE-2023-4039",
+          "cvss": 4.8,
+          "severity": "MEDIUM",
+          "epss": 0.00186,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2023-4039"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gcc-9-base@9.4.0-1ubuntu1~20.04.2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-9",
+      "name": "gcc-9-base",
+      "version": "9.4.0-1ubuntu1~20.04.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gir1.2-glib-2.0@1.64.1-1~ubuntu20.04.1?arch=amd64&distro=ubuntu-20.04&upstream=gobject-introspection",
+      "name": "gir1.2-glib-2.0",
+      "version": "1.64.1-1~ubuntu20.04.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gir1.2-packagekitglib-1.0@1.1.13-2ubuntu1.1?arch=amd64&distro=ubuntu-20.04&upstream=packagekit",
+      "name": "gir1.2-packagekitglib-1.0",
+      "version": "1.1.13-2ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/AlecAivazis/survey/v2@v2.3.7",
+      "name": "v2",
+      "version": "v2.3.7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/DefangLabs/secret-detector@v0.0.0-20250403165618-22662109213e",
+      "name": "secret-detector",
+      "version": "v0.0.0-20250403165618-22662109213e",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/Masterminds/semver/v3@v3.2.1",
+      "name": "v3",
+      "version": "v3.2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/acarl005/stripansi@v0.0.0-20180116102854-5a71ef0e047d",
+      "name": "stripansi",
+      "version": "v0.0.0-20180116102854-5a71ef0e047d",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/agext/levenshtein@v1.2.3",
+      "name": "levenshtein",
+      "version": "v1.2.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/apparentlymart/go-cidr@v1.0.1",
+      "name": "go-cidr",
+      "version": "v1.0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/apparentlymart/go-textseg/v15@v15.0.0",
+      "name": "v15",
+      "version": "v15.0.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2@v1.30.3",
+      "name": "aws-sdk-go-v2",
+      "version": "v1.30.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/config@v1.27.27",
+      "name": "config",
+      "version": "v1.27.27",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/credentials@v1.17.27",
+      "name": "credentials",
+      "version": "v1.17.27",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/feature/ec2/imds@v1.16.11",
+      "name": "imds",
+      "version": "v1.16.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/internal/configsources@v1.3.15",
+      "name": "configsources",
+      "version": "v1.3.15",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/internal/endpoints/v2@v2.6.15",
+      "name": "v2",
+      "version": "v2.6.15",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/internal/ini@v1.8.0",
+      "name": "ini",
+      "version": "v1.8.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding@v1.11.3",
+      "name": "accept-encoding",
+      "version": "v1.11.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/internal/presigned-url@v1.11.17",
+      "name": "presigned-url",
+      "version": "v1.11.17",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/sso@v1.22.4",
+      "name": "sso",
+      "version": "v1.22.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/ssooidc@v1.26.4",
+      "name": "ssooidc",
+      "version": "v1.26.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/sts@v1.30.3",
+      "name": "sts",
+      "version": "v1.30.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/aws/smithy-go@v1.20.3",
+      "name": "smithy-go",
+      "version": "v1.20.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/beorn7/perks@v1.0.1",
+      "name": "perks",
+      "version": "v1.0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/buger/goterm@v1.0.4",
+      "name": "goterm",
+      "version": "v1.0.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/cenkalti/backoff/v4@v4.3.0",
+      "name": "v4",
+      "version": "v4.3.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/cespare/xxhash/v2@v2.3.0",
+      "name": "v2",
+      "version": "v2.3.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/compose-spec/compose-go/v2@v2.6.0",
+      "name": "v2",
+      "version": "v2.6.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/console@v1.0.4",
+      "name": "console",
+      "version": "v1.0.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/containerd/api@v1.8.0",
+      "name": "api",
+      "version": "v1.8.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/containerd/v2@v2.0.4",
+      "name": "v2",
+      "version": "v2.0.4",
+      "uniqueVulnCount": 3,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-25621",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 6e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-pwhc-rpq9-4c8w",
+            "GO-2025-4100"
+          ]
+        },
+        {
+          "id": "CVE-2025-47291",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.0027,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-cxfp-7pvr-95ff",
+            "GO-2025-3701"
+          ]
+        },
+        {
+          "id": "CVE-2025-64329",
+          "cvss": 6.9,
+          "severity": "MEDIUM",
+          "epss": 8e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-m6hq-p25p-ffr2",
+            "GO-2025-4108"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/continuity@v0.4.5",
+      "name": "continuity",
+      "version": "v0.4.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/errdefs@v1.0.0",
+      "name": "errdefs",
+      "version": "v1.0.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/errdefs/pkg@v0.3.0",
+      "name": "pkg",
+      "version": "v0.3.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/log@v0.1.0",
+      "name": "log",
+      "version": "v0.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/platforms@v1.0.0-rc.1",
+      "name": "platforms",
+      "version": "v1.0.0-rc.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/ttrpc@v1.2.7",
+      "name": "ttrpc",
+      "version": "v1.2.7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/containerd/typeurl/v2@v2.2.3",
+      "name": "v2",
+      "version": "v2.2.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+      "name": "go-spew",
+      "version": "v1.1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/distribution/reference@v0.6.0",
+      "name": "reference",
+      "version": "v0.6.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/buildx",
+      "name": "buildx",
+      "version": "",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-0495",
+          "cvss": 4.1,
+          "severity": "MEDIUM",
+          "epss": 0.00039,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-m4gq-fm9h-8q75",
+            "GO-2025-3527"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/buildx@v0.23.0",
+      "name": "buildx",
+      "version": "v0.23.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/cli@v28.0.4%2Bincompatible",
+      "name": "cli",
+      "version": "v28.0.4%2Bincompatible",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-15558",
+          "cvss": 8.0,
+          "severity": "HIGH",
+          "epss": 0.0002,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-p436-gjf2-799p",
+            "GO-2026-4610"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/cli@v28.1.0%2Bincompatible",
+      "name": "cli",
+      "version": "v28.1.0%2Bincompatible",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-15558",
+          "cvss": 8.0,
+          "severity": "HIGH",
+          "epss": 0.0002,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-p436-gjf2-799p",
+            "GO-2026-4610"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/cli-docs-tool@v0.9.0",
+      "name": "cli-docs-tool",
+      "version": "v0.9.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/cli/cmd/docker",
+      "name": "docker",
+      "version": "",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/compose/v2",
+      "name": "v2",
+      "version": "",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-15558",
+          "cvss": 8.0,
+          "severity": "HIGH",
+          "epss": 0.0002,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4610"
+          ]
+        },
+        {
+          "id": "CVE-2025-62725",
+          "cvss": 8.9,
+          "severity": "HIGH",
+          "epss": 0.00038,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-gv8h-7v7w-r22q",
+            "GO-2025-4077"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/distribution@v2.8.3%2Bincompatible",
+      "name": "distribution",
+      "version": "v2.8.3%2Bincompatible",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/docker@v28.0.4%2Bincompatible",
+      "name": "docker",
+      "version": "v28.0.4%2Bincompatible",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2026-33997",
+          "cvss": 6.8,
+          "severity": "MEDIUM",
+          "epss": 0.00011,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-pxq6-2prw-chj9"
+          ]
+        },
+        {
+          "id": "CVE-2026-34040",
+          "cvss": 8.8,
+          "severity": "HIGH",
+          "epss": 0.00012,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-x744-4wpc-v9h2"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/docker@v28.1.0%2Bincompatible",
+      "name": "docker",
+      "version": "v28.1.0%2Bincompatible",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2026-33997",
+          "cvss": 6.8,
+          "severity": "MEDIUM",
+          "epss": 0.00011,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-pxq6-2prw-chj9"
+          ]
+        },
+        {
+          "id": "CVE-2026-34040",
+          "cvss": 8.8,
+          "severity": "HIGH",
+          "epss": 0.00012,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-x744-4wpc-v9h2"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/docker-credential-helpers@v0.9.3",
+      "name": "docker-credential-helpers",
+      "version": "v0.9.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/go@v1.5.1-1.0.20160303222718-d30aec9fd63c",
+      "name": "go",
+      "version": "v1.5.1-1.0.20160303222718-d30aec9fd63c",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/go-connections@v0.5.0",
+      "name": "go-connections",
+      "version": "v0.5.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/go-metrics@v0.0.1",
+      "name": "go-metrics",
+      "version": "v0.0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/docker/go-units@v0.5.0",
+      "name": "go-units",
+      "version": "v0.5.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/eiannone/keyboard@v0.0.0-20220611211555-0d226195f203",
+      "name": "keyboard",
+      "version": "v0.0.0-20220611211555-0d226195f203",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/emicklei/go-restful/v3@v3.11.0",
+      "name": "v3",
+      "version": "v3.11.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/felixge/httpsnoop@v1.0.4",
+      "name": "httpsnoop",
+      "version": "v1.0.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/fvbommel/sortorder@v1.0.1",
+      "name": "sortorder",
+      "version": "v1.0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/fvbommel/sortorder@v1.1.0",
+      "name": "sortorder",
+      "version": "v1.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/fxamacker/cbor/v2@v2.7.0",
+      "name": "v2",
+      "version": "v2.7.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/go-logr/logr@v1.4.2",
+      "name": "logr",
+      "version": "v1.4.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/go-logr/stdr@v1.2.2",
+      "name": "stdr",
+      "version": "v1.2.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/go-openapi/jsonpointer@v0.19.6",
+      "name": "jsonpointer",
+      "version": "v0.19.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/go-openapi/jsonreference@v0.20.2",
+      "name": "jsonreference",
+      "version": "v0.20.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/go-openapi/swag@v0.22.4",
+      "name": "swag",
+      "version": "v0.22.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/go-viper/mapstructure/v2@v2.0.0",
+      "name": "v2",
+      "version": "v2.0.0",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-11065",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 8e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-2464-8j7c-4cjm",
+            "GO-2025-3900"
+          ]
+        },
+        {
+          "id": "GHSA-fv92-fjc5-jj9h",
+          "cvss": null,
+          "severity": null,
+          "epss": null,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-3787"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/gofrs/flock@v0.12.1",
+      "name": "flock",
+      "version": "v0.12.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/gogo/protobuf@v1.3.2",
+      "name": "protobuf",
+      "version": "v1.3.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/golang-jwt/jwt/v5@v5.2.2",
+      "name": "v5",
+      "version": "v5.2.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/golang/protobuf@v1.5.4",
+      "name": "protobuf",
+      "version": "v1.5.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/google/gnostic-models@v0.6.8",
+      "name": "gnostic-models",
+      "version": "v0.6.8",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/google/go-cmp@v0.7.0",
+      "name": "go-cmp",
+      "version": "v0.7.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/google/gofuzz@v1.2.0",
+      "name": "gofuzz",
+      "version": "v1.2.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/google/shlex@v0.0.0-20191202100458-e7afc7fbc510",
+      "name": "shlex",
+      "version": "v0.0.0-20191202100458-e7afc7fbc510",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/google/uuid@v1.6.0",
+      "name": "uuid",
+      "version": "v1.6.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/gorilla/mux@v1.8.1",
+      "name": "mux",
+      "version": "v1.8.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/gorilla/websocket@v1.5.0",
+      "name": "websocket",
+      "version": "v1.5.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/grpc-ecosystem/grpc-gateway/v2@v2.22.0",
+      "name": "v2",
+      "version": "v2.22.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/hashicorp/errwrap@v1.1.0",
+      "name": "errwrap",
+      "version": "v1.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.2",
+      "name": "go-cleanhttp",
+      "version": "v0.5.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/hashicorp/go-cty-funcs@v0.0.0-20241120183456-c51673e0b3dd",
+      "name": "go-cty-funcs",
+      "version": "v0.0.0-20241120183456-c51673e0b3dd",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/hashicorp/go-multierror@v1.1.1",
+      "name": "go-multierror",
+      "version": "v1.1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/hashicorp/go-version@v1.7.0",
+      "name": "go-version",
+      "version": "v1.7.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/hashicorp/hcl/v2@v2.23.0",
+      "name": "v2",
+      "version": "v2.23.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/imdario/mergo@v0.3.16",
+      "name": "mergo",
+      "version": "v0.3.16",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/in-toto/in-toto-golang@v0.5.0",
+      "name": "in-toto-golang",
+      "version": "v0.5.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/inhies/go-bytesize@v0.0.0-20220417184213-4913239db9cf",
+      "name": "go-bytesize",
+      "version": "v0.0.0-20220417184213-4913239db9cf",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/jonboulle/clockwork@v0.5.0",
+      "name": "clockwork",
+      "version": "v0.5.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/josharian/intern@v1.0.0",
+      "name": "intern",
+      "version": "v1.0.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/json-iterator/go@v1.1.12",
+      "name": "go",
+      "version": "v1.1.12",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/kballard/go-shellquote@v0.0.0-20180428030007-95032a82bc51",
+      "name": "go-shellquote",
+      "version": "v0.0.0-20180428030007-95032a82bc51",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/klauspost/compress@v1.18.0",
+      "name": "compress",
+      "version": "v1.18.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mailru/easyjson@v0.7.7",
+      "name": "easyjson",
+      "version": "v0.7.7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mattn/go-colorable@v0.1.13",
+      "name": "go-colorable",
+      "version": "v0.1.13",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mattn/go-isatty@v0.0.20",
+      "name": "go-isatty",
+      "version": "v0.0.20",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mattn/go-runewidth@v0.0.15",
+      "name": "go-runewidth",
+      "version": "v0.0.15",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mattn/go-shellwords@v1.0.12",
+      "name": "go-shellwords",
+      "version": "v1.0.12",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mgutz/ansi@v0.0.0-20170206155736-9520e82c474b",
+      "name": "ansi",
+      "version": "v0.0.0-20170206155736-9520e82c474b",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mitchellh/go-wordwrap@v0.0.0-20150314170334-ad45545899c7",
+      "name": "go-wordwrap",
+      "version": "v0.0.0-20150314170334-ad45545899c7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mitchellh/hashstructure/v2@v2.0.2",
+      "name": "v2",
+      "version": "v2.0.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mitchellh/mapstructure@v1.5.0",
+      "name": "mapstructure",
+      "version": "v1.5.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/buildkit@v0.21.0",
+      "name": "buildkit",
+      "version": "v0.21.0",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2026-33747",
+          "cvss": 9.8,
+          "severity": "CRITICAL",
+          "epss": 6e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-4c29-8rgm-jvjj",
+            "GO-2026-4858"
+          ]
+        },
+        {
+          "id": "CVE-2026-33748",
+          "cvss": 8.2,
+          "severity": "HIGH",
+          "epss": 0.00017,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-4vrq-3vrq-g6gg",
+            "GO-2026-4859"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/docker-image-spec@v1.3.1",
+      "name": "docker-image-spec",
+      "version": "v1.3.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/go-archive@v0.1.0",
+      "name": "go-archive",
+      "version": "v0.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/locker@v1.0.1",
+      "name": "locker",
+      "version": "v1.0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/patternmatcher@v0.6.0",
+      "name": "patternmatcher",
+      "version": "v0.6.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/spdystream@v0.4.0",
+      "name": "spdystream",
+      "version": "v0.4.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/sys/atomicwriter@v0.1.0",
+      "name": "atomicwriter",
+      "version": "v0.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/sys/capability@v0.4.0",
+      "name": "capability",
+      "version": "v0.4.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/sys/mountinfo@v0.7.2",
+      "name": "mountinfo",
+      "version": "v0.7.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/sys/sequential@v0.6.0",
+      "name": "sequential",
+      "version": "v0.6.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/sys/signal@v0.7.1",
+      "name": "signal",
+      "version": "v0.7.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/sys/symlink@v0.3.0",
+      "name": "symlink",
+      "version": "v0.3.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/sys/user@v0.4.0",
+      "name": "user",
+      "version": "v0.4.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/sys/userns@v0.1.0",
+      "name": "userns",
+      "version": "v0.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/moby/term@v0.5.2",
+      "name": "term",
+      "version": "v0.5.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd",
+      "name": "concurrent",
+      "version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/modern-go/reflect2@v1.0.2",
+      "name": "reflect2",
+      "version": "v1.0.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/morikuni/aec@v1.0.0",
+      "name": "aec",
+      "version": "v1.0.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/munnerz/goautoneg@v0.0.0-20191010083416-a7dc8b61c822",
+      "name": "goautoneg",
+      "version": "v0.0.0-20191010083416-a7dc8b61c822",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/mxk/go-flowrate@v0.0.0-20140419014527-cca7078d478f",
+      "name": "go-flowrate",
+      "version": "v0.0.0-20140419014527-cca7078d478f",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/opencontainers/go-digest@v1.0.0",
+      "name": "go-digest",
+      "version": "v1.0.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/opencontainers/image-spec@v1.1.1",
+      "name": "image-spec",
+      "version": "v1.1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/pelletier/go-toml@v1.9.5",
+      "name": "go-toml",
+      "version": "v1.9.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/pkg/browser@v0.0.0-20240102092130-5ac0b6a4141c",
+      "name": "browser",
+      "version": "v0.0.0-20240102092130-5ac0b6a4141c",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/pkg/errors@v0.9.1",
+      "name": "errors",
+      "version": "v0.9.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/planetscale/vtprotobuf@v0.6.1-0.20240319094008-0393e58bdf10",
+      "name": "vtprotobuf",
+      "version": "v0.6.1-0.20240319094008-0393e58bdf10",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/pmezard/go-difflib@v1.0.0",
+      "name": "go-difflib",
+      "version": "v1.0.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/prometheus/client_golang@v1.20.5",
+      "name": "client_golang",
+      "version": "v1.20.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/prometheus/client_model@v0.6.1",
+      "name": "client_model",
+      "version": "v0.6.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/prometheus/common@v0.55.0",
+      "name": "common",
+      "version": "v0.55.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/prometheus/procfs@v0.15.1",
+      "name": "procfs",
+      "version": "v0.15.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/r3labs/sse@v0.0.0-20210224172625-26fe804710bc",
+      "name": "sse",
+      "version": "v0.0.0-20210224172625-26fe804710bc",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/rivo/uniseg@v0.2.0",
+      "name": "uniseg",
+      "version": "v0.2.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/secure-systems-lab/go-securesystemslib@v0.4.0",
+      "name": "go-securesystemslib",
+      "version": "v0.4.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/serialx/hashring@v0.0.0-20200727003509-22c0c7ab6b1b",
+      "name": "hashring",
+      "version": "v0.0.0-20200727003509-22c0c7ab6b1b",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/shibumi/go-pathspec@v1.3.0",
+      "name": "go-pathspec",
+      "version": "v1.3.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/sirupsen/logrus@v1.9.3",
+      "name": "logrus",
+      "version": "v1.9.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/skratchdot/open-golang@v0.0.0-20200116055534-eef842397966",
+      "name": "open-golang",
+      "version": "v0.0.0-20200116055534-eef842397966",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/spf13/cobra@v1.9.1",
+      "name": "cobra",
+      "version": "v1.9.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.6",
+      "name": "pflag",
+      "version": "v1.0.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/stretchr/testify@v1.10.0",
+      "name": "testify",
+      "version": "v1.10.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/theupdateframework/notary@v0.7.0",
+      "name": "notary",
+      "version": "v0.7.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/tilt-dev/fsnotify@v1.4.8-0.20220602155310-fff9c274a375",
+      "name": "fsnotify",
+      "version": "v1.4.8-0.20220602155310-fff9c274a375",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/tonistiigi/dchapes-mode@v0.0.0-20250318174251-73d941a28323",
+      "name": "dchapes-mode",
+      "version": "v0.0.0-20250318174251-73d941a28323",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/tonistiigi/fsutil@v0.0.0-20250410151801-5b74a7ad7583",
+      "name": "fsutil",
+      "version": "v0.0.0-20250410151801-5b74a7ad7583",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/tonistiigi/go-csvvalue@v0.0.0-20240710180619-ddb21b71c0b4",
+      "name": "go-csvvalue",
+      "version": "v0.0.0-20240710180619-ddb21b71c0b4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/tonistiigi/jaeger-ui-rest@v0.0.0-20250408171107-3dd17559e117",
+      "name": "jaeger-ui-rest",
+      "version": "v0.0.0-20250408171107-3dd17559e117",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/tonistiigi/units@v0.0.0-20180711220420-6950e57a87ea",
+      "name": "units",
+      "version": "v0.0.0-20180711220420-6950e57a87ea",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/tonistiigi/vt100@v0.0.0-20240514184818-90bafcd6abab",
+      "name": "vt100",
+      "version": "v0.0.0-20240514184818-90bafcd6abab",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/x448/float16@v0.8.4",
+      "name": "float16",
+      "version": "v0.8.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/xeipuuv/gojsonpointer@v0.0.0-20190905194746-02993c407bfb",
+      "name": "gojsonpointer",
+      "version": "v0.0.0-20190905194746-02993c407bfb",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/xeipuuv/gojsonreference@v0.0.0-20180127040603-bd5ef7bd5415",
+      "name": "gojsonreference",
+      "version": "v0.0.0-20180127040603-bd5ef7bd5415",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/xeipuuv/gojsonschema@v1.2.0",
+      "name": "gojsonschema",
+      "version": "v1.2.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/xhit/go-str2duration/v2@v2.1.0",
+      "name": "v2",
+      "version": "v2.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/github.com/zclconf/go-cty@v1.16.0",
+      "name": "go-cty",
+      "version": "v1.16.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/glib-networking@2.64.2-1ubuntu0.1?arch=amd64&distro=ubuntu-20.04",
+      "name": "glib-networking",
+      "version": "2.64.2-1ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/glib-networking-common@2.64.2-1ubuntu0.1?arch=all&distro=ubuntu-20.04&upstream=glib-networking",
+      "name": "glib-networking-common",
+      "version": "2.64.2-1ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/glib-networking-services@2.64.2-1ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=glib-networking",
+      "name": "glib-networking-services",
+      "version": "2.64.2-1ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gnupg@2.2.19-3ubuntu2.5?arch=all&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gnupg",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gnupg-l10n@2.2.19-3ubuntu2.5?arch=all&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gnupg-l10n",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gnupg-utils@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gnupg-utils",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/auto/sdk@v1.1.0",
+      "name": "sdk",
+      "version": "v1.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc@v0.56.0",
+      "name": "otelgrpc",
+      "version": "v0.56.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace@v0.56.0",
+      "name": "otelhttptrace",
+      "version": "v0.56.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@v0.56.0",
+      "name": "otelhttp",
+      "version": "v0.56.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel@v1.31.0",
+      "name": "otel",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel@v1.34.0",
+      "name": "otel",
+      "version": "v1.34.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc@v1.31.0",
+      "name": "otlpmetricgrpc",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp@v1.31.0",
+      "name": "otlpmetrichttp",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/otlp/otlptrace@v1.31.0",
+      "name": "otlptrace",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc@v1.31.0",
+      "name": "otlptracegrpc",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp@v1.31.0",
+      "name": "otlptracehttp",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/metric@v1.31.0",
+      "name": "metric",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/metric@v1.34.0",
+      "name": "metric",
+      "version": "v1.34.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/sdk@v1.31.0",
+      "name": "sdk",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2026-24051",
+          "cvss": 7.0,
+          "severity": "HIGH",
+          "epss": 8e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-9h8m-3fm2-qjrq",
+            "GO-2026-4394"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/sdk@v1.34.0",
+      "name": "sdk",
+      "version": "v1.34.0",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2026-24051",
+          "cvss": 7.0,
+          "severity": "HIGH",
+          "epss": 8e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-9h8m-3fm2-qjrq",
+            "GO-2026-4394"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/sdk/metric@v1.31.0",
+      "name": "metric",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/sdk/metric@v1.34.0",
+      "name": "metric",
+      "version": "v1.34.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/trace@v1.31.0",
+      "name": "trace",
+      "version": "v1.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/otel/trace@v1.34.0",
+      "name": "trace",
+      "version": "v1.34.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.opentelemetry.io/proto/otlp@v1.3.1",
+      "name": "otlp",
+      "version": "v1.3.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/go.uber.org/mock@v0.5.1",
+      "name": "mock",
+      "version": "v0.5.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/crypto@v0.37.0",
+      "name": "crypto",
+      "version": "v0.37.0",
+      "uniqueVulnCount": 3,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-47913",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00039,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4116"
+          ]
+        },
+        {
+          "id": "CVE-2025-47914",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00021,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-f6x5-jh6r-wrfv",
+            "GO-2025-4135"
+          ]
+        },
+        {
+          "id": "CVE-2025-58181",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00087,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-j5w8-q4qc-rx2x",
+            "GO-2025-4134"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/exp@v0.0.0-20250408133849-7e4ce0ab07d0",
+      "name": "exp",
+      "version": "v0.0.0-20250408133849-7e4ce0ab07d0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/net@v0.39.0",
+      "name": "net",
+      "version": "v0.39.0",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-47911",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00016,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4440"
+          ]
+        },
+        {
+          "id": "CVE-2025-58190",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.0001,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4441"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/oauth2@v0.23.0",
+      "name": "oauth2",
+      "version": "v0.23.0",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-22868",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00112,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-6v2p-p543-phr9",
+            "GO-2025-3488"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/oauth2@v0.25.0",
+      "name": "oauth2",
+      "version": "v0.25.0",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-22868",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00112,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-6v2p-p543-phr9",
+            "GO-2025-3488"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/sync@v0.13.0",
+      "name": "sync",
+      "version": "v0.13.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/sys@v0.32.0",
+      "name": "sys",
+      "version": "v0.32.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/term@v0.31.0",
+      "name": "term",
+      "version": "v0.31.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/text@v0.24.0",
+      "name": "text",
+      "version": "v0.24.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/time@v0.11.0",
+      "name": "time",
+      "version": "v0.11.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/google.golang.org/genproto/googleapis/api@v0.0.0-20241021214115-324edc3d5d38",
+      "name": "api",
+      "version": "v0.0.0-20241021214115-324edc3d5d38",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/google.golang.org/genproto/googleapis/api@v0.0.0-20250106144421-5f5ef82da422",
+      "name": "api",
+      "version": "v0.0.0-20250106144421-5f5ef82da422",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/google.golang.org/genproto/googleapis/rpc@v0.0.0-20241021214115-324edc3d5d38",
+      "name": "rpc",
+      "version": "v0.0.0-20241021214115-324edc3d5d38",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/google.golang.org/genproto/googleapis/rpc@v0.0.0-20250115164207-1a7da9e5054f",
+      "name": "rpc",
+      "version": "v0.0.0-20250115164207-1a7da9e5054f",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/google.golang.org/grpc@v1.69.4",
+      "name": "grpc",
+      "version": "v1.69.4",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2026-33186",
+          "cvss": 9.1,
+          "severity": "CRITICAL",
+          "epss": 0.00014,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-p77j-4mvh-x3m3",
+            "GO-2026-4762"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/google.golang.org/grpc@v1.71.1",
+      "name": "grpc",
+      "version": "v1.71.1",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2026-33186",
+          "cvss": 9.1,
+          "severity": "CRITICAL",
+          "epss": 0.00014,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-p77j-4mvh-x3m3",
+            "GO-2026-4762"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:golang/google.golang.org/protobuf@v1.35.2",
+      "name": "protobuf",
+      "version": "v1.35.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/google.golang.org/protobuf@v1.36.4",
+      "name": "protobuf",
+      "version": "v1.36.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/gopkg.in/cenkalti/backoff.v1@v1.1.0",
+      "name": "backoff.v1",
+      "version": "v1.1.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/gopkg.in/inf.v0@v0.9.1",
+      "name": "inf.v0",
+      "version": "v0.9.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/gopkg.in/ini.v1@v1.67.0",
+      "name": "ini.v1",
+      "version": "v1.67.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+      "name": "yaml.v2",
+      "version": "v2.4.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/gopkg.in/yaml.v3@v3.0.1",
+      "name": "yaml.v3",
+      "version": "v3.0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gpg@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gpg",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gpg-agent@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gpg-agent",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gpg-wks-client@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gpg-wks-client",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gpg-wks-server@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gpg-wks-server",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gpgconf@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gpgconf",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gpgsm@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gpgsm",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gpgv@2.2.19-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=gnupg2",
+      "name": "gpgv",
+      "version": "2.2.19-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/grep@3.4-1?arch=amd64&distro=ubuntu-20.04",
+      "name": "grep",
+      "version": "3.4-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gsettings-desktop-schemas@3.36.0-1ubuntu1?arch=all&distro=ubuntu-20.04",
+      "name": "gsettings-desktop-schemas",
+      "version": "3.36.0-1ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/gzip@1.10-0ubuntu4.1?arch=amd64&distro=ubuntu-20.04",
+      "name": "gzip",
+      "version": "1.10-0ubuntu4.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/hostname@3.23?arch=amd64&distro=ubuntu-20.04",
+      "name": "hostname",
+      "version": "3.23",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/idna@2.7",
+      "name": "idna",
+      "version": "2.7",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-3651",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.0067,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-jjg7-2v4v-x38h",
+            "PYSEC-2024-60"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/idna@2.8",
+      "name": "idna",
+      "version": "2.8",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-3651",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.0067,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-jjg7-2v4v-x38h",
+            "PYSEC-2024-60"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/importlib-metadata@8.5.0",
+      "name": "importlib-metadata",
+      "version": "8.5.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/init-system-helpers@1.57?arch=all&distro=ubuntu-20.04",
+      "name": "init-system-helpers",
+      "version": "1.57",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/iso-codes@4.4-1?arch=all&distro=ubuntu-20.04",
+      "name": "iso-codes",
+      "version": "4.4-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/itsdangerous@2.2.0",
+      "name": "itsdangerous",
+      "version": "2.2.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/jinja2@3.1.6",
+      "name": "jinja2",
+      "version": "3.1.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/k8s.io/api@v0.31.2",
+      "name": "api",
+      "version": "v0.31.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/k8s.io/apimachinery@v0.31.2",
+      "name": "apimachinery",
+      "version": "v0.31.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/k8s.io/client-go@v0.31.2",
+      "name": "client-go",
+      "version": "v0.31.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/k8s.io/klog/v2@v2.130.1",
+      "name": "v2",
+      "version": "v2.130.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/k8s.io/kube-openapi@v0.0.0-20240228011516-70dd3763d340",
+      "name": "kube-openapi",
+      "version": "v0.0.0-20240228011516-70dd3763d340",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/k8s.io/utils@v0.0.0-20240711033017-18e509b52bc8",
+      "name": "utils",
+      "version": "v0.0.0-20240711033017-18e509b52bc8",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/krb5-locales@1.17-6ubuntu4.11?arch=all&distro=ubuntu-20.04&upstream=krb5",
+      "name": "krb5-locales",
+      "version": "1.17-6ubuntu4.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libacl1@2.2.53-6?arch=amd64&distro=ubuntu-20.04&upstream=acl",
+      "name": "libacl1",
+      "version": "2.2.53-6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libalgorithm-diff-perl@1.19.03-2?arch=all&distro=ubuntu-20.04",
+      "name": "libalgorithm-diff-perl",
+      "version": "1.19.03-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libalgorithm-diff-xs-perl@0.04-6?arch=amd64&distro=ubuntu-20.04",
+      "name": "libalgorithm-diff-xs-perl",
+      "version": "0.04-6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libalgorithm-merge-perl@0.08-3?arch=all&distro=ubuntu-20.04",
+      "name": "libalgorithm-merge-perl",
+      "version": "0.08-3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libapparmor1@2.13.3-7ubuntu5.4?arch=amd64&distro=ubuntu-20.04&upstream=apparmor",
+      "name": "libapparmor1",
+      "version": "2.13.3-7ubuntu5.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libappstream4@0.12.10-2?arch=amd64&distro=ubuntu-20.04&upstream=appstream",
+      "name": "libappstream4",
+      "version": "0.12.10-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libapt-pkg6.0@2.0.10?arch=amd64&distro=ubuntu-20.04&upstream=apt",
+      "name": "libapt-pkg6.0",
+      "version": "2.0.10",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libargon2-1@0~20171227-0.2?arch=amd64&distro=ubuntu-20.04&upstream=argon2",
+      "name": "libargon2-1",
+      "version": "0~20171227-0.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libasan5@9.4.0-1ubuntu1~20.04.2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-9",
+      "name": "libasan5",
+      "version": "9.4.0-1ubuntu1~20.04.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libasn1-8-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libasn1-8-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libassuan0@2.5.3-7ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=libassuan",
+      "name": "libassuan0",
+      "version": "2.5.3-7ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libatomic1@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libatomic1",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libattr1@1%3A2.4.48-5?arch=amd64&distro=ubuntu-20.04&upstream=attr",
+      "name": "libattr1",
+      "version": "1%3A2.4.48-5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libaudit-common@1%3A2.8.5-2ubuntu6?arch=all&distro=ubuntu-20.04&upstream=audit",
+      "name": "libaudit-common",
+      "version": "1%3A2.8.5-2ubuntu6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libaudit1@1%3A2.8.5-2ubuntu6?arch=amd64&distro=ubuntu-20.04&upstream=audit",
+      "name": "libaudit1",
+      "version": "1%3A2.8.5-2ubuntu6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libbinutils@2.34-6ubuntu1.11?arch=amd64&distro=ubuntu-20.04&upstream=binutils",
+      "name": "libbinutils",
+      "version": "2.34-6ubuntu1.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libblkid1@2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04&upstream=util-linux",
+      "name": "libblkid1",
+      "version": "2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libbrotli1@1.0.7-6ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=brotli",
+      "name": "libbrotli1",
+      "version": "1.0.7-6ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libbz2-1.0@1.0.8-2?arch=amd64&distro=ubuntu-20.04&upstream=bzip2",
+      "name": "libbz2-1.0",
+      "version": "1.0.8-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libc-bin@2.31-0ubuntu9.17?arch=amd64&distro=ubuntu-20.04&upstream=glibc",
+      "name": "libc-bin",
+      "version": "2.31-0ubuntu9.17",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libc-dev-bin@2.31-0ubuntu9.18?arch=amd64&distro=ubuntu-20.04&upstream=glibc",
+      "name": "libc-dev-bin",
+      "version": "2.31-0ubuntu9.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libc6@2.31-0ubuntu9.18?arch=amd64&distro=ubuntu-20.04&upstream=glibc",
+      "name": "libc6",
+      "version": "2.31-0ubuntu9.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libc6-dev@2.31-0ubuntu9.18?arch=amd64&distro=ubuntu-20.04&upstream=glibc",
+      "name": "libc6-dev",
+      "version": "2.31-0ubuntu9.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcap-ng0@0.7.9-2.1build1?arch=amd64&distro=ubuntu-20.04&upstream=libcap-ng",
+      "name": "libcap-ng0",
+      "version": "0.7.9-2.1build1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcap2@1%3A2.32-1ubuntu0.2?arch=amd64&distro=ubuntu-20.04",
+      "name": "libcap2",
+      "version": "1%3A2.32-1ubuntu0.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcap2-bin@1%3A2.32-1ubuntu0.2?arch=amd64&distro=ubuntu-20.04&upstream=libcap2",
+      "name": "libcap2-bin",
+      "version": "1%3A2.32-1ubuntu0.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcc1-0@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libcc1-0",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcom-err2@1.45.5-2ubuntu1.2?arch=amd64&distro=ubuntu-20.04&upstream=e2fsprogs",
+      "name": "libcom-err2",
+      "version": "1.45.5-2ubuntu1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcrypt-dev@1%3A4.4.10-10ubuntu4?arch=amd64&distro=ubuntu-20.04&upstream=libxcrypt",
+      "name": "libcrypt-dev",
+      "version": "1%3A4.4.10-10ubuntu4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcrypt1@1%3A4.4.10-10ubuntu4?arch=amd64&distro=ubuntu-20.04&upstream=libxcrypt",
+      "name": "libcrypt1",
+      "version": "1%3A4.4.10-10ubuntu4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcryptsetup12@2%3A2.2.2-3ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=cryptsetup",
+      "name": "libcryptsetup12",
+      "version": "2%3A2.2.2-3ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libctf-nobfd0@2.34-6ubuntu1.11?arch=amd64&distro=ubuntu-20.04&upstream=binutils",
+      "name": "libctf-nobfd0",
+      "version": "2.34-6ubuntu1.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libctf0@2.34-6ubuntu1.11?arch=amd64&distro=ubuntu-20.04&upstream=binutils",
+      "name": "libctf0",
+      "version": "2.34-6ubuntu1.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libcurl4@7.68.0-1ubuntu2.25?arch=amd64&distro=ubuntu-20.04&upstream=curl",
+      "name": "libcurl4",
+      "version": "7.68.0-1ubuntu2.25",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libdb5.3@5.3.28%2Bdfsg1-0.6ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=db5.3",
+      "name": "libdb5.3",
+      "version": "5.3.28%2Bdfsg1-0.6ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libdbus-1-3@1.12.16-2ubuntu2.3?arch=amd64&distro=ubuntu-20.04&upstream=dbus",
+      "name": "libdbus-1-3",
+      "version": "1.12.16-2ubuntu2.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libdconf1@0.36.0-1?arch=amd64&distro=ubuntu-20.04&upstream=dconf",
+      "name": "libdconf1",
+      "version": "0.36.0-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libdebconfclient0@0.251ubuntu1?arch=amd64&distro=ubuntu-20.04&upstream=cdebconf",
+      "name": "libdebconfclient0",
+      "version": "0.251ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libdevmapper1.02.1@2%3A1.02.167-1ubuntu1?arch=amd64&distro=ubuntu-20.04&upstream=lvm2%402.03.07-1ubuntu1",
+      "name": "libdevmapper1.02.1",
+      "version": "2%3A1.02.167-1ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libdpkg-perl@1.19.7ubuntu3.2?arch=all&distro=ubuntu-20.04&upstream=dpkg",
+      "name": "libdpkg-perl",
+      "version": "1.19.7ubuntu3.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libelf1@0.176-1.1ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=elfutils",
+      "name": "libelf1",
+      "version": "0.176-1.1ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libexpat1@2.2.9-1ubuntu0.8?arch=amd64&distro=ubuntu-20.04&upstream=expat",
+      "name": "libexpat1",
+      "version": "2.2.9-1ubuntu0.8",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libexpat1-dev@2.2.9-1ubuntu0.8?arch=amd64&distro=ubuntu-20.04&upstream=expat",
+      "name": "libexpat1-dev",
+      "version": "2.2.9-1ubuntu0.8",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libext2fs2@1.45.5-2ubuntu1.2?arch=amd64&distro=ubuntu-20.04&upstream=e2fsprogs",
+      "name": "libext2fs2",
+      "version": "1.45.5-2ubuntu1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libfakeroot@1.24-1?arch=amd64&distro=ubuntu-20.04&upstream=fakeroot",
+      "name": "libfakeroot",
+      "version": "1.24-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libfdisk1@2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04&upstream=util-linux",
+      "name": "libfdisk1",
+      "version": "2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libffi7@3.3-4?arch=amd64&distro=ubuntu-20.04&upstream=libffi",
+      "name": "libffi7",
+      "version": "3.3-4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libfile-fcntllock-perl@0.22-3build4?arch=amd64&distro=ubuntu-20.04",
+      "name": "libfile-fcntllock-perl",
+      "version": "0.22-3build4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgcc-9-dev@9.4.0-1ubuntu1~20.04.2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-9",
+      "name": "libgcc-9-dev",
+      "version": "9.4.0-1ubuntu1~20.04.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgcc-s1@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libgcc-s1",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgcrypt20@1.8.5-5ubuntu1.1?arch=amd64&distro=ubuntu-20.04",
+      "name": "libgcrypt20",
+      "version": "1.8.5-5ubuntu1.1",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-2236",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00745,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2024-2236"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgdbm-compat4@1.18.1-5?arch=amd64&distro=ubuntu-20.04&upstream=gdbm",
+      "name": "libgdbm-compat4",
+      "version": "1.18.1-5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgdbm6@1.18.1-5?arch=amd64&distro=ubuntu-20.04&upstream=gdbm",
+      "name": "libgdbm6",
+      "version": "1.18.1-5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgirepository-1.0-1@1.64.1-1~ubuntu20.04.1?arch=amd64&distro=ubuntu-20.04&upstream=gobject-introspection",
+      "name": "libgirepository-1.0-1",
+      "version": "1.64.1-1~ubuntu20.04.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libglib2.0-0@2.64.6-1~ubuntu20.04.9?arch=amd64&distro=ubuntu-20.04&upstream=glib2.0",
+      "name": "libglib2.0-0",
+      "version": "2.64.6-1~ubuntu20.04.9",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libglib2.0-bin@2.64.6-1~ubuntu20.04.9?arch=amd64&distro=ubuntu-20.04&upstream=glib2.0",
+      "name": "libglib2.0-bin",
+      "version": "2.64.6-1~ubuntu20.04.9",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libglib2.0-data@2.64.6-1~ubuntu20.04.9?arch=all&distro=ubuntu-20.04&upstream=glib2.0",
+      "name": "libglib2.0-data",
+      "version": "2.64.6-1~ubuntu20.04.9",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgmp10@2%3A6.2.0%2Bdfsg-4ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=gmp",
+      "name": "libgmp10",
+      "version": "2%3A6.2.0%2Bdfsg-4ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgnutls30@3.6.13-2ubuntu1.12?arch=amd64&distro=ubuntu-20.04&upstream=gnutls28",
+      "name": "libgnutls30",
+      "version": "3.6.13-2ubuntu1.12",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgomp1@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libgomp1",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgpg-error0@1.37-1?arch=amd64&distro=ubuntu-20.04&upstream=libgpg-error",
+      "name": "libgpg-error0",
+      "version": "1.37-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgssapi-krb5-2@1.17-6ubuntu4.11?arch=amd64&distro=ubuntu-20.04&upstream=krb5",
+      "name": "libgssapi-krb5-2",
+      "version": "1.17-6ubuntu4.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgssapi3-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libgssapi3-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libgstreamer1.0-0@1.16.3-0ubuntu1.2?arch=amd64&distro=ubuntu-20.04&upstream=gstreamer1.0",
+      "name": "libgstreamer1.0-0",
+      "version": "1.16.3-0ubuntu1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libhcrypto4-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libhcrypto4-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libheimbase1-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libheimbase1-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libheimntlm0-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libheimntlm0-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libhogweed5@3.5.1%2Breally3.5.1-2ubuntu0.2?arch=amd64&distro=ubuntu-20.04&upstream=nettle",
+      "name": "libhogweed5",
+      "version": "3.5.1%2Breally3.5.1-2ubuntu0.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libhx509-5-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libhx509-5-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libicu66@66.1-2ubuntu2.1?arch=amd64&distro=ubuntu-20.04&upstream=icu",
+      "name": "libicu66",
+      "version": "66.1-2ubuntu2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libidn2-0@2.2.0-2?arch=amd64&distro=ubuntu-20.04&upstream=libidn2",
+      "name": "libidn2-0",
+      "version": "2.2.0-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libip4tc2@1.8.4-3ubuntu2.1?arch=amd64&distro=ubuntu-20.04&upstream=iptables",
+      "name": "libip4tc2",
+      "version": "1.8.4-3ubuntu2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libisl22@0.22.1-1?arch=amd64&distro=ubuntu-20.04&upstream=isl",
+      "name": "libisl22",
+      "version": "0.22.1-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libitm1@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libitm1",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libjson-c4@0.13.1%2Bdfsg-7ubuntu0.3?arch=amd64&distro=ubuntu-20.04&upstream=json-c",
+      "name": "libjson-c4",
+      "version": "0.13.1%2Bdfsg-7ubuntu0.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libk5crypto3@1.17-6ubuntu4.11?arch=amd64&distro=ubuntu-20.04&upstream=krb5",
+      "name": "libk5crypto3",
+      "version": "1.17-6ubuntu4.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libkeyutils1@1.6-6ubuntu1.1?arch=amd64&distro=ubuntu-20.04&upstream=keyutils",
+      "name": "libkeyutils1",
+      "version": "1.6-6ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libkmod2@27-1ubuntu2.1?arch=amd64&distro=ubuntu-20.04&upstream=kmod",
+      "name": "libkmod2",
+      "version": "27-1ubuntu2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libkrb5-26-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libkrb5-26-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libkrb5-3@1.17-6ubuntu4.11?arch=amd64&distro=ubuntu-20.04&upstream=krb5",
+      "name": "libkrb5-3",
+      "version": "1.17-6ubuntu4.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libkrb5support0@1.17-6ubuntu4.11?arch=amd64&distro=ubuntu-20.04&upstream=krb5",
+      "name": "libkrb5support0",
+      "version": "1.17-6ubuntu4.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libksba8@1.3.5-2ubuntu0.20.04.2?arch=amd64&distro=ubuntu-20.04&upstream=libksba",
+      "name": "libksba8",
+      "version": "1.3.5-2ubuntu0.20.04.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libldap-2.4-2@2.4.49%2Bdfsg-2ubuntu1.10?arch=amd64&distro=ubuntu-20.04&upstream=openldap",
+      "name": "libldap-2.4-2",
+      "version": "2.4.49%2Bdfsg-2ubuntu1.10",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libldap-common@2.4.49%2Bdfsg-2ubuntu1.10?arch=all&distro=ubuntu-20.04&upstream=openldap",
+      "name": "libldap-common",
+      "version": "2.4.49%2Bdfsg-2ubuntu1.10",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/liblmdb0@0.9.24-1?arch=amd64&distro=ubuntu-20.04&upstream=lmdb",
+      "name": "liblmdb0",
+      "version": "0.9.24-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/liblocale-gettext-perl@1.07-4?arch=amd64&distro=ubuntu-20.04",
+      "name": "liblocale-gettext-perl",
+      "version": "1.07-4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/liblsan0@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "liblsan0",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/liblz4-1@1.9.2-2ubuntu0.20.04.1?arch=amd64&distro=ubuntu-20.04&upstream=lz4",
+      "name": "liblz4-1",
+      "version": "1.9.2-2ubuntu0.20.04.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/liblzma5@5.2.4-1ubuntu1.1?arch=amd64&distro=ubuntu-20.04&upstream=xz-utils",
+      "name": "liblzma5",
+      "version": "5.2.4-1ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libmagic-mgc@1%3A5.38-4?arch=amd64&distro=ubuntu-20.04&upstream=file",
+      "name": "libmagic-mgc",
+      "version": "1%3A5.38-4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libmagic1@1%3A5.38-4?arch=amd64&distro=ubuntu-20.04&upstream=file",
+      "name": "libmagic1",
+      "version": "1%3A5.38-4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libmount1@2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04&upstream=util-linux",
+      "name": "libmount1",
+      "version": "2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libmpc3@1.1.0-1?arch=amd64&distro=ubuntu-20.04&upstream=mpclib3",
+      "name": "libmpc3",
+      "version": "1.1.0-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libmpdec2@2.4.2-3?arch=amd64&distro=ubuntu-20.04&upstream=mpdecimal",
+      "name": "libmpdec2",
+      "version": "2.4.2-3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libmpfr6@4.0.2-1?arch=amd64&distro=ubuntu-20.04&upstream=mpfr4",
+      "name": "libmpfr6",
+      "version": "4.0.2-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libncurses6@6.2-0ubuntu2.1?arch=amd64&distro=ubuntu-20.04&upstream=ncurses",
+      "name": "libncurses6",
+      "version": "6.2-0ubuntu2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libncursesw6@6.2-0ubuntu2.1?arch=amd64&distro=ubuntu-20.04&upstream=ncurses",
+      "name": "libncursesw6",
+      "version": "6.2-0ubuntu2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libnettle7@3.5.1%2Breally3.5.1-2ubuntu0.2?arch=amd64&distro=ubuntu-20.04&upstream=nettle",
+      "name": "libnettle7",
+      "version": "3.5.1%2Breally3.5.1-2ubuntu0.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libnghttp2-14@1.40.0-1ubuntu0.3?arch=amd64&distro=ubuntu-20.04&upstream=nghttp2",
+      "name": "libnghttp2-14",
+      "version": "1.40.0-1ubuntu0.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libnpth0@1.6-1?arch=amd64&distro=ubuntu-20.04&upstream=npth",
+      "name": "libnpth0",
+      "version": "1.6-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libnss-systemd@245.4-4ubuntu3.24?arch=amd64&distro=ubuntu-20.04&upstream=systemd",
+      "name": "libnss-systemd",
+      "version": "245.4-4ubuntu3.24",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libp11-kit0@0.23.20-1ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=p11-kit",
+      "name": "libp11-kit0",
+      "version": "0.23.20-1ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpackagekit-glib2-18@1.1.13-2ubuntu1.1?arch=amd64&distro=ubuntu-20.04&upstream=packagekit",
+      "name": "libpackagekit-glib2-18",
+      "version": "1.1.13-2ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpam-cap@1%3A2.32-1ubuntu0.2?arch=amd64&distro=ubuntu-20.04&upstream=libcap2",
+      "name": "libpam-cap",
+      "version": "1%3A2.32-1ubuntu0.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpam-modules@1.3.1-5ubuntu4.7?arch=amd64&distro=ubuntu-20.04&upstream=pam",
+      "name": "libpam-modules",
+      "version": "1.3.1-5ubuntu4.7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpam-modules-bin@1.3.1-5ubuntu4.7?arch=amd64&distro=ubuntu-20.04&upstream=pam",
+      "name": "libpam-modules-bin",
+      "version": "1.3.1-5ubuntu4.7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpam-runtime@1.3.1-5ubuntu4.7?arch=all&distro=ubuntu-20.04&upstream=pam",
+      "name": "libpam-runtime",
+      "version": "1.3.1-5ubuntu4.7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpam-systemd@245.4-4ubuntu3.24?arch=amd64&distro=ubuntu-20.04&upstream=systemd",
+      "name": "libpam-systemd",
+      "version": "245.4-4ubuntu3.24",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpam0g@1.3.1-5ubuntu4.7?arch=amd64&distro=ubuntu-20.04&upstream=pam",
+      "name": "libpam0g",
+      "version": "1.3.1-5ubuntu4.7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.34-7ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=pcre2",
+      "name": "libpcre2-8-0",
+      "version": "10.34-7ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpcre3@2%3A8.39-12ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=pcre3",
+      "name": "libpcre3",
+      "version": "2%3A8.39-12ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libperl5.30@5.30.0-9ubuntu0.5?arch=amd64&distro=ubuntu-20.04&upstream=perl",
+      "name": "libperl5.30",
+      "version": "5.30.0-9ubuntu0.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpolkit-agent-1-0@0.105-26ubuntu1.3?arch=amd64&distro=ubuntu-20.04&upstream=policykit-1",
+      "name": "libpolkit-agent-1-0",
+      "version": "0.105-26ubuntu1.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpolkit-gobject-1-0@0.105-26ubuntu1.3?arch=amd64&distro=ubuntu-20.04&upstream=policykit-1",
+      "name": "libpolkit-gobject-1-0",
+      "version": "0.105-26ubuntu1.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libprocps8@2%3A3.3.16-1ubuntu2.4?arch=amd64&distro=ubuntu-20.04&upstream=procps",
+      "name": "libprocps8",
+      "version": "2%3A3.3.16-1ubuntu2.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libproxy1v5@0.4.15-10ubuntu1.2?arch=amd64&distro=ubuntu-20.04&upstream=libproxy",
+      "name": "libproxy1v5",
+      "version": "0.4.15-10ubuntu1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpsl5@0.21.0-1ubuntu1?arch=amd64&distro=ubuntu-20.04&upstream=libpsl",
+      "name": "libpsl5",
+      "version": "0.21.0-1ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpython3-dev@3.8.2-0ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=python3-defaults",
+      "name": "libpython3-dev",
+      "version": "3.8.2-0ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpython3-stdlib@3.8.2-0ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=python3-defaults",
+      "name": "libpython3-stdlib",
+      "version": "3.8.2-0ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpython3.8@3.8.10-0ubuntu1~20.04.18?arch=amd64&distro=ubuntu-20.04&upstream=python3.8",
+      "name": "libpython3.8",
+      "version": "3.8.10-0ubuntu1~20.04.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpython3.8-dev@3.8.10-0ubuntu1~20.04.18?arch=amd64&distro=ubuntu-20.04&upstream=python3.8",
+      "name": "libpython3.8-dev",
+      "version": "3.8.10-0ubuntu1~20.04.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpython3.8-minimal@3.8.10-0ubuntu1~20.04.18?arch=amd64&distro=ubuntu-20.04&upstream=python3.8",
+      "name": "libpython3.8-minimal",
+      "version": "3.8.10-0ubuntu1~20.04.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libpython3.8-stdlib@3.8.10-0ubuntu1~20.04.18?arch=amd64&distro=ubuntu-20.04&upstream=python3.8",
+      "name": "libpython3.8-stdlib",
+      "version": "3.8.10-0ubuntu1~20.04.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libquadmath0@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libquadmath0",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libreadline8@8.0-4?arch=amd64&distro=ubuntu-20.04&upstream=readline",
+      "name": "libreadline8",
+      "version": "8.0-4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libroken18-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libroken18-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/librtmp1@2.4%2B20151223.gitfa8646d.1-2build1?arch=amd64&distro=ubuntu-20.04&upstream=rtmpdump",
+      "name": "librtmp1",
+      "version": "2.4%2B20151223.gitfa8646d.1-2build1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsasl2-2@2.1.27%2Bdfsg-2ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=cyrus-sasl2",
+      "name": "libsasl2-2",
+      "version": "2.1.27%2Bdfsg-2ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsasl2-modules@2.1.27%2Bdfsg-2ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=cyrus-sasl2",
+      "name": "libsasl2-modules",
+      "version": "2.1.27%2Bdfsg-2ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsasl2-modules-db@2.1.27%2Bdfsg-2ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=cyrus-sasl2",
+      "name": "libsasl2-modules-db",
+      "version": "2.1.27%2Bdfsg-2ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libseccomp2@2.5.1-1ubuntu1~20.04.2?arch=amd64&distro=ubuntu-20.04&upstream=libseccomp",
+      "name": "libseccomp2",
+      "version": "2.5.1-1ubuntu1~20.04.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libselinux1@3.0-1build2?arch=amd64&distro=ubuntu-20.04&upstream=libselinux",
+      "name": "libselinux1",
+      "version": "3.0-1build2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsemanage-common@3.0-1build2?arch=all&distro=ubuntu-20.04&upstream=libsemanage",
+      "name": "libsemanage-common",
+      "version": "3.0-1build2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsemanage1@3.0-1build2?arch=amd64&distro=ubuntu-20.04&upstream=libsemanage",
+      "name": "libsemanage1",
+      "version": "3.0-1build2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsepol1@3.0-1ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=libsepol",
+      "name": "libsepol1",
+      "version": "3.0-1ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsmartcols1@2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04&upstream=util-linux",
+      "name": "libsmartcols1",
+      "version": "2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsoup2.4-1@2.70.0-1ubuntu0.5?arch=amd64&distro=ubuntu-20.04&upstream=libsoup2.4",
+      "name": "libsoup2.4-1",
+      "version": "2.70.0-1ubuntu0.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsqlite3-0@3.31.1-4ubuntu0.7?arch=amd64&distro=ubuntu-20.04&upstream=sqlite3",
+      "name": "libsqlite3-0",
+      "version": "3.31.1-4ubuntu0.7",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libss2@1.45.5-2ubuntu1.2?arch=amd64&distro=ubuntu-20.04&upstream=e2fsprogs",
+      "name": "libss2",
+      "version": "1.45.5-2ubuntu1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libssh-4@0.9.3-2ubuntu2.5?arch=amd64&distro=ubuntu-20.04&upstream=libssh",
+      "name": "libssh-4",
+      "version": "0.9.3-2ubuntu2.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libssl1.1@1.1.1f-1ubuntu2.24?arch=amd64&distro=ubuntu-20.04&upstream=openssl",
+      "name": "libssl1.1",
+      "version": "1.1.1f-1ubuntu2.24",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libstdc%2B%2B-9-dev@9.4.0-1ubuntu1~20.04.2?arch=amd64&distro=ubuntu-20.04&upstream=gcc-9",
+      "name": "libstdc%2B%2B-9-dev",
+      "version": "9.4.0-1ubuntu1~20.04.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libstdc%2B%2B6@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libstdc%2B%2B6",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libstemmer0d@0%2Bsvn585-2?arch=amd64&distro=ubuntu-20.04&upstream=snowball",
+      "name": "libstemmer0d",
+      "version": "0%2Bsvn585-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libsystemd0@245.4-4ubuntu3.24?arch=amd64&distro=ubuntu-20.04&upstream=systemd",
+      "name": "libsystemd0",
+      "version": "245.4-4ubuntu3.24",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libtasn1-6@4.16.0-2ubuntu0.1?arch=amd64&distro=ubuntu-20.04",
+      "name": "libtasn1-6",
+      "version": "4.16.0-2ubuntu0.1",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-46848",
+          "cvss": 9.1,
+          "severity": "CRITICAL",
+          "epss": 0.00326,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2021-46848",
+            "USN-7954-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-13151",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00062,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-13151",
+            "USN-7954-2"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libtinfo6@6.2-0ubuntu2.1?arch=amd64&distro=ubuntu-20.04&upstream=ncurses",
+      "name": "libtinfo6",
+      "version": "6.2-0ubuntu2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libtsan0@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libtsan0",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libubsan1@10.5.0-1ubuntu1~20.04?arch=amd64&distro=ubuntu-20.04&upstream=gcc-10",
+      "name": "libubsan1",
+      "version": "10.5.0-1ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libudev1@245.4-4ubuntu3.24?arch=amd64&distro=ubuntu-20.04&upstream=systemd",
+      "name": "libudev1",
+      "version": "245.4-4ubuntu3.24",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libunistring2@0.9.10-2?arch=amd64&distro=ubuntu-20.04&upstream=libunistring",
+      "name": "libunistring2",
+      "version": "0.9.10-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libuuid1@2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04&upstream=util-linux",
+      "name": "libuuid1",
+      "version": "2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libwind0-heimdal@7.7.0%2Bdfsg-1ubuntu1.4?arch=amd64&distro=ubuntu-20.04&upstream=heimdal",
+      "name": "libwind0-heimdal",
+      "version": "7.7.0%2Bdfsg-1ubuntu1.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libxml2@2.9.10%2Bdfsg-5ubuntu0.20.04.10?arch=amd64&distro=ubuntu-20.04",
+      "name": "libxml2",
+      "version": "2.9.10%2Bdfsg-5ubuntu0.20.04.10",
+      "uniqueVulnCount": 11,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-26434",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 6e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-26434"
+          ]
+        },
+        {
+          "id": "CVE-2025-49794",
+          "cvss": 9.1,
+          "severity": "CRITICAL",
+          "epss": 0.00113,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-49794",
+            "USN-7694-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-49796",
+          "cvss": 9.1,
+          "severity": "CRITICAL",
+          "epss": 0.00491,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-49796",
+            "USN-7694-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-6021",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00759,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-6021",
+            "USN-7694-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-6170",
+          "cvss": 2.5,
+          "severity": "LOW",
+          "epss": 0.00034,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-6170",
+            "USN-7694-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-7425",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.00054,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-7425",
+            "USN-7852-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-8732",
+          "cvss": 4.8,
+          "severity": "MEDIUM",
+          "epss": 0.00015,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-8732",
+            "USN-7974-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-9714",
+          "cvss": 6.2,
+          "severity": "MEDIUM",
+          "epss": 9e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-9714",
+            "USN-7743-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-0989",
+          "cvss": 3.7,
+          "severity": "LOW",
+          "epss": 0.0002,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-0989",
+            "USN-7974-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-0990",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.0006,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-0990",
+            "USN-7974-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-0992",
+          "cvss": 2.9,
+          "severity": "LOW",
+          "epss": 0.00023,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-0992",
+            "USN-7974-1"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libyaml-0-2@0.2.2-1?arch=amd64&distro=ubuntu-20.04&upstream=libyaml",
+      "name": "libyaml-0-2",
+      "version": "0.2.2-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/libzstd1@1.4.4%2Bdfsg-3ubuntu0.1?arch=amd64&distro=ubuntu-20.04&upstream=libzstd",
+      "name": "libzstd1",
+      "version": "1.4.4%2Bdfsg-3ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/linux-libc-dev@5.4.0-216.236?arch=amd64&distro=ubuntu-20.04&upstream=linux",
+      "name": "linux-libc-dev",
+      "version": "5.4.0-216.236",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/login@1%3A4.8.1-1ubuntu5.20.04.5?arch=amd64&distro=ubuntu-20.04&upstream=shadow",
+      "name": "login",
+      "version": "1%3A4.8.1-1ubuntu5.20.04.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/logsave@1.45.5-2ubuntu1.2?arch=amd64&distro=ubuntu-20.04&upstream=e2fsprogs",
+      "name": "logsave",
+      "version": "1.45.5-2ubuntu1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/lsb-base@11.1.0ubuntu2?arch=all&distro=ubuntu-20.04&upstream=lsb",
+      "name": "lsb-base",
+      "version": "11.1.0ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/lsb-release@11.1.0ubuntu2?arch=all&distro=ubuntu-20.04&upstream=lsb",
+      "name": "lsb-release",
+      "version": "11.1.0ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/lxml@4.9.3",
+      "name": "lxml",
+      "version": "4.9.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/make@4.2.1-1.2?arch=amd64&distro=ubuntu-20.04&upstream=make-dfsg",
+      "name": "make",
+      "version": "4.2.1-1.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/manpages@5.05-1?arch=all&distro=ubuntu-20.04",
+      "name": "manpages",
+      "version": "5.05-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/manpages-dev@5.05-1?arch=all&distro=ubuntu-20.04&upstream=manpages",
+      "name": "manpages-dev",
+      "version": "5.05-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/markupsafe@2.1.5",
+      "name": "markupsafe",
+      "version": "2.1.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/mawk@1.3.4.20200120-2?arch=amd64&distro=ubuntu-20.04",
+      "name": "mawk",
+      "version": "1.3.4.20200120-2",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2017-20229",
+          "cvss": 9.8,
+          "severity": "CRITICAL",
+          "epss": 0.00077,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2017-20229"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/mime-support@3.64ubuntu1?arch=all&distro=ubuntu-20.04",
+      "name": "mime-support",
+      "version": "3.64ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/mount@2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04&upstream=util-linux",
+      "name": "mount",
+      "version": "2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/ncurses-base@6.2-0ubuntu2.1?arch=all&distro=ubuntu-20.04&upstream=ncurses",
+      "name": "ncurses-base",
+      "version": "6.2-0ubuntu2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/ncurses-bin@6.2-0ubuntu2.1?arch=amd64&distro=ubuntu-20.04&upstream=ncurses",
+      "name": "ncurses-bin",
+      "version": "6.2-0ubuntu2.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/netbase@6.1?arch=all&distro=ubuntu-20.04",
+      "name": "netbase",
+      "version": "6.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/networkd-dispatcher@2.1-2~ubuntu20.04.3?arch=all&distro=ubuntu-20.04",
+      "name": "networkd-dispatcher",
+      "version": "2.1-2~ubuntu20.04.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/openssl@1.1.1f-1ubuntu2.24?arch=amd64&distro=ubuntu-20.04",
+      "name": "openssl",
+      "version": "1.1.1f-1ubuntu2.24",
+      "uniqueVulnCount": 10,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-68160",
+          "cvss": 4.7,
+          "severity": "MEDIUM",
+          "epss": 0.00024,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-68160",
+            "USN-7980-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-69418",
+          "cvss": 4.0,
+          "severity": "MEDIUM",
+          "epss": 7e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69418",
+            "USN-7980-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-69419",
+          "cvss": 7.4,
+          "severity": "HIGH",
+          "epss": 0.0006,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69419",
+            "USN-7980-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-69420",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.0029,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69420",
+            "USN-7980-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-69421",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00034,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69421",
+            "USN-7980-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-9230",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00034,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-9230",
+            "USN-7786-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-9231",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00022,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "USN-7786-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-9232",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00036,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "USN-7786-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-22795",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00024,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-22795",
+            "USN-7980-2"
+          ]
+        },
+        {
+          "id": "CVE-2026-22796",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00112,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-22796",
+            "USN-7980-2"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/packagekit@1.1.13-2ubuntu1.1?arch=amd64&distro=ubuntu-20.04",
+      "name": "packagekit",
+      "version": "1.1.13-2ubuntu1.1",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-0987",
+          "cvss": 3.3,
+          "severity": "LOW",
+          "epss": 0.00041,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2022-0987"
+          ]
+        },
+        {
+          "id": "CVE-2024-0217",
+          "cvss": 3.3,
+          "severity": "LOW",
+          "epss": 0.00013,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2024-0217"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/packagekit-tools@1.1.13-2ubuntu1.1?arch=amd64&distro=ubuntu-20.04&upstream=packagekit",
+      "name": "packagekit-tools",
+      "version": "1.1.13-2ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/passwd@1%3A4.8.1-1ubuntu5.20.04.5?arch=amd64&distro=ubuntu-20.04&upstream=shadow",
+      "name": "passwd",
+      "version": "1%3A4.8.1-1ubuntu5.20.04.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/patch@2.7.6-6?arch=amd64&distro=ubuntu-20.04",
+      "name": "patch",
+      "version": "2.7.6-6",
+      "uniqueVulnCount": 3,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2018-6952",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.11805,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2018-6952"
+          ]
+        },
+        {
+          "id": "CVE-2019-20633",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.11805,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2019-20633"
+          ]
+        },
+        {
+          "id": "CVE-2021-45261",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00197,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2021-45261"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/perl@5.30.0-9ubuntu0.5?arch=amd64&distro=ubuntu-20.04",
+      "name": "perl",
+      "version": "5.30.0-9ubuntu0.5",
+      "uniqueVulnCount": 5,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-31486",
+          "cvss": 8.1,
+          "severity": "HIGH",
+          "epss": 0.00598,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2023-31486"
+          ]
+        },
+        {
+          "id": "CVE-2023-47039",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.00089,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2023-47039"
+          ]
+        },
+        {
+          "id": "CVE-2025-40909",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00041,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-40909"
+          ]
+        },
+        {
+          "id": "CVE-2026-3381",
+          "cvss": 9.8,
+          "severity": "CRITICAL",
+          "epss": 7e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-3381"
+          ]
+        },
+        {
+          "id": "CVE-2026-4176",
+          "cvss": 9.8,
+          "severity": "CRITICAL",
+          "epss": 7e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-4176"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/perl-base@5.30.0-9ubuntu0.5?arch=amd64&distro=ubuntu-20.04&upstream=perl",
+      "name": "perl-base",
+      "version": "5.30.0-9ubuntu0.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/perl-modules-5.30@5.30.0-9ubuntu0.5?arch=all&distro=ubuntu-20.04&upstream=perl",
+      "name": "perl-modules-5.30",
+      "version": "5.30.0-9ubuntu0.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/pinentry-curses@1.1.0-3build1?arch=amd64&distro=ubuntu-20.04&upstream=pinentry",
+      "name": "pinentry-curses",
+      "version": "1.1.0-3build1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/pip@20.0.2",
+      "name": "pip",
+      "version": "20.0.2",
+      "uniqueVulnCount": 4,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-3572",
+          "cvss": 5.7,
+          "severity": "MEDIUM",
+          "epss": 0.0024,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-5xp3-jfq3-5q8x",
+            "PYSEC-2021-437"
+          ]
+        },
+        {
+          "id": "CVE-2023-5752",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00075,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-mq26-g339-26xf",
+            "PYSEC-2023-228"
+          ]
+        },
+        {
+          "id": "CVE-2025-8869",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.0002,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-4xh5-x5gv-qwph"
+          ]
+        },
+        {
+          "id": "CVE-2026-1703",
+          "cvss": 2.0,
+          "severity": "LOW",
+          "epss": 0.00022,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-6vgw-5pg2-w6jp"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/policykit-1@0.105-26ubuntu1.3?arch=amd64&distro=ubuntu-20.04",
+      "name": "policykit-1",
+      "version": "0.105-26ubuntu1.3",
+      "uniqueVulnCount": 3,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2016-2568",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.00131,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2016-2568"
+          ]
+        },
+        {
+          "id": "CVE-2025-7519",
+          "cvss": 6.7,
+          "severity": "MEDIUM",
+          "epss": 0.00012,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-7519"
+          ]
+        },
+        {
+          "id": "CVE-2026-4897",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00014,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-4897"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/procps@2%3A3.3.16-1ubuntu2.4?arch=amd64&distro=ubuntu-20.04",
+      "name": "procps",
+      "version": "2%3A3.3.16-1ubuntu2.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/publicsuffix@20200303.0012-1?arch=all&distro=ubuntu-20.04",
+      "name": "publicsuffix",
+      "version": "20200303.0012-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/pycparser@2.23",
+      "name": "pycparser",
+      "version": "2.23",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/pygobject@3.36.0",
+      "name": "pygobject",
+      "version": "3.36.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/python-apt@2.0.1%2Bubuntu0.20.4.1",
+      "name": "python-apt",
+      "version": "2.0.1%2Bubuntu0.20.4.1",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2019-15795",
+          "cvss": 4.7,
+          "severity": "MEDIUM",
+          "epss": 0.00184,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-rp8m-h266-53jh"
+          ]
+        },
+        {
+          "id": "CVE-2019-15796",
+          "cvss": 4.7,
+          "severity": "MEDIUM",
+          "epss": 0.00174,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-pj65-3pf6-c5q4"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python-apt-common@2.0.1ubuntu0.20.04.1?arch=all&distro=ubuntu-20.04&upstream=python-apt",
+      "name": "python-apt-common",
+      "version": "2.0.1ubuntu0.20.04.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python-pip-whl@20.0.2-5ubuntu1.11?arch=all&distro=ubuntu-20.04&upstream=python-pip",
+      "name": "python-pip-whl",
+      "version": "20.0.2-5ubuntu1.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3@3.8.2-0ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=python3-defaults",
+      "name": "python3",
+      "version": "3.8.2-0ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-apt@2.0.1ubuntu0.20.04.1?arch=amd64&distro=ubuntu-20.04&upstream=python-apt",
+      "name": "python3-apt",
+      "version": "2.0.1ubuntu0.20.04.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-certifi@2019.11.28-1?arch=all&distro=ubuntu-20.04&upstream=python-certifi",
+      "name": "python3-certifi",
+      "version": "2019.11.28-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-chardet@3.0.4-4build1?arch=all&distro=ubuntu-20.04&upstream=chardet",
+      "name": "python3-chardet",
+      "version": "3.0.4-4build1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-dbus@1.2.16-1build1?arch=amd64&distro=ubuntu-20.04&upstream=dbus-python",
+      "name": "python3-dbus",
+      "version": "1.2.16-1build1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-dev@3.8.2-0ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=python3-defaults",
+      "name": "python3-dev",
+      "version": "3.8.2-0ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-distro-info@0.23ubuntu1.1?arch=all&distro=ubuntu-20.04&upstream=distro-info",
+      "name": "python3-distro-info",
+      "version": "0.23ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-distutils@3.8.10-0ubuntu1~20.04?arch=all&distro=ubuntu-20.04&upstream=python3-stdlib-extensions",
+      "name": "python3-distutils",
+      "version": "3.8.10-0ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-gi@3.36.0-1?arch=amd64&distro=ubuntu-20.04&upstream=pygobject",
+      "name": "python3-gi",
+      "version": "3.36.0-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-idna@2.8-1ubuntu0.1?arch=all&distro=ubuntu-20.04&upstream=python-idna",
+      "name": "python3-idna",
+      "version": "2.8-1ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-lib2to3@3.8.10-0ubuntu1~20.04?arch=all&distro=ubuntu-20.04&upstream=python3-stdlib-extensions",
+      "name": "python3-lib2to3",
+      "version": "3.8.10-0ubuntu1~20.04",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-minimal@3.8.2-0ubuntu2?arch=amd64&distro=ubuntu-20.04&upstream=python3-defaults",
+      "name": "python3-minimal",
+      "version": "3.8.2-0ubuntu2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-pip@20.0.2-5ubuntu1.11?arch=all&distro=ubuntu-20.04&upstream=python-pip",
+      "name": "python3-pip",
+      "version": "20.0.2-5ubuntu1.11",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-pkg-resources@45.2.0-1ubuntu0.3?arch=all&distro=ubuntu-20.04&upstream=setuptools",
+      "name": "python3-pkg-resources",
+      "version": "45.2.0-1ubuntu0.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-requests@2.22.0-2ubuntu1.1?arch=all&distro=ubuntu-20.04&upstream=requests",
+      "name": "python3-requests",
+      "version": "2.22.0-2ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-requests-unixsocket@0.2.0-2?arch=all&distro=ubuntu-20.04&upstream=python-requests-unixsocket",
+      "name": "python3-requests-unixsocket",
+      "version": "0.2.0-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-setuptools@45.2.0-1ubuntu0.3?arch=all&distro=ubuntu-20.04&upstream=setuptools",
+      "name": "python3-setuptools",
+      "version": "45.2.0-1ubuntu0.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-six@1.14.0-2?arch=all&distro=ubuntu-20.04&upstream=six",
+      "name": "python3-six",
+      "version": "1.14.0-2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-software-properties@0.99.9.12?arch=all&distro=ubuntu-20.04&upstream=software-properties",
+      "name": "python3-software-properties",
+      "version": "0.99.9.12",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-urllib3@1.25.8-2ubuntu0.4?arch=all&distro=ubuntu-20.04&upstream=python-urllib3",
+      "name": "python3-urllib3",
+      "version": "1.25.8-2ubuntu0.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3-wheel@0.34.2-1ubuntu0.1?arch=all&distro=ubuntu-20.04&upstream=wheel",
+      "name": "python3-wheel",
+      "version": "0.34.2-1ubuntu0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3.8@3.8.10-0ubuntu1~20.04.18?arch=amd64&distro=ubuntu-20.04",
+      "name": "python3.8",
+      "version": "3.8.10-0ubuntu1~20.04.18",
+      "uniqueVulnCount": 27,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2007-4559",
+          "cvss": 9.8,
+          "severity": "CRITICAL",
+          "epss": 0.00126,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2007-4559"
+          ]
+        },
+        {
+          "id": "CVE-2020-10735",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00395,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2020-10735"
+          ]
+        },
+        {
+          "id": "CVE-2021-23336",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00311,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2021-23336"
+          ]
+        },
+        {
+          "id": "CVE-2025-11468",
+          "cvss": 5.7,
+          "severity": "MEDIUM",
+          "epss": 0.00039,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-11468",
+            "USN-8018-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-12084",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.00049,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-12084",
+            "USN-8018-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-12781",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.00018,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-12781"
+          ]
+        },
+        {
+          "id": "CVE-2025-13462",
+          "cvss": 2.0,
+          "severity": "LOW",
+          "epss": 0.00012,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-13462"
+          ]
+        },
+        {
+          "id": "CVE-2025-13836",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00152,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-13836",
+            "USN-7951-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-13837",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00025,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-13837",
+            "USN-8018-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-15282",
+          "cvss": 6.0,
+          "severity": "MEDIUM",
+          "epss": 0.00044,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-15282",
+            "USN-8018-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-15366",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00081,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-15366",
+            "USN-8018-1",
+            "USN-8018-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-15367",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00081,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-15367",
+            "USN-8018-1",
+            "USN-8018-2"
+          ]
+        },
+        {
+          "id": "CVE-2025-1795",
+          "cvss": 2.3,
+          "severity": "LOW",
+          "epss": 0.00593,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-1795",
+            "USN-7570-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-4516",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00209,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-4516",
+            "USN-7570-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-6069",
+          "cvss": 4.3,
+          "severity": "MEDIUM",
+          "epss": 0.00283,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-6069",
+            "USN-7710-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-6075",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00021,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-6075",
+            "USN-7886-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-69534",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00249,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-69534"
+          ]
+        },
+        {
+          "id": "CVE-2025-8194",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00173,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-8194",
+            "USN-7710-1"
+          ]
+        },
+        {
+          "id": "CVE-2025-8291",
+          "cvss": 4.3,
+          "severity": "MEDIUM",
+          "epss": 0.00114,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-8291",
+            "USN-7886-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-0672",
+          "cvss": 6.0,
+          "severity": "MEDIUM",
+          "epss": 0.00158,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-0672",
+            "USN-8018-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-0865",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00132,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-0865",
+            "USN-8018-1",
+            "USN-8018-2"
+          ]
+        },
+        {
+          "id": "CVE-2026-1299",
+          "cvss": 6.0,
+          "severity": "MEDIUM",
+          "epss": 0.00238,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-1299"
+          ]
+        },
+        {
+          "id": "CVE-2026-2297",
+          "cvss": 5.7,
+          "severity": "MEDIUM",
+          "epss": 0.00016,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-2297"
+          ]
+        },
+        {
+          "id": "CVE-2026-3479",
+          "cvss": 2.1,
+          "severity": "LOW",
+          "epss": 7e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-3479"
+          ]
+        },
+        {
+          "id": "CVE-2026-3644",
+          "cvss": 6.0,
+          "severity": "MEDIUM",
+          "epss": 0.00158,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-3644"
+          ]
+        },
+        {
+          "id": "CVE-2026-4224",
+          "cvss": 6.0,
+          "severity": "MEDIUM",
+          "epss": 0.00019,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-4224"
+          ]
+        },
+        {
+          "id": "CVE-2026-4519",
+          "cvss": 7.0,
+          "severity": "HIGH",
+          "epss": 0.00033,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-4519"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3.8-dev@3.8.10-0ubuntu1~20.04.18?arch=amd64&distro=ubuntu-20.04&upstream=python3.8",
+      "name": "python3.8-dev",
+      "version": "3.8.10-0ubuntu1~20.04.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/python3.8-minimal@3.8.10-0ubuntu1~20.04.18?arch=amd64&distro=ubuntu-20.04&upstream=python3.8",
+      "name": "python3.8-minimal",
+      "version": "3.8.10-0ubuntu1~20.04.18",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/readline-common@8.0-4?arch=all&distro=ubuntu-20.04&upstream=readline",
+      "name": "readline-common",
+      "version": "8.0-4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/requests@2.19.1",
+      "name": "requests",
+      "version": "2.19.1",
+      "uniqueVulnCount": 5,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2018-18074",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00243,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-x84v-xcm2-53pg",
+            "PYSEC-2018-28"
+          ]
+        },
+        {
+          "id": "CVE-2023-32681",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 0.06278,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-j8r2-6x86-q33q",
+            "PYSEC-2023-74"
+          ]
+        },
+        {
+          "id": "CVE-2024-35195",
+          "cvss": 5.6,
+          "severity": "MEDIUM",
+          "epss": 0.00044,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-9wx4-h78v-vm56"
+          ]
+        },
+        {
+          "id": "CVE-2024-47081",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.0007,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-9hjg-9r4m-mvj7"
+          ]
+        },
+        {
+          "id": "CVE-2026-25645",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 4e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-gc5v-m9x4-r6x2"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/requests@2.22.0",
+      "name": "requests",
+      "version": "2.22.0",
+      "uniqueVulnCount": 4,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-32681",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 0.06278,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-j8r2-6x86-q33q",
+            "PYSEC-2023-74"
+          ]
+        },
+        {
+          "id": "CVE-2024-35195",
+          "cvss": 5.6,
+          "severity": "MEDIUM",
+          "epss": 0.00044,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-9wx4-h78v-vm56"
+          ]
+        },
+        {
+          "id": "CVE-2024-47081",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.0007,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-9hjg-9r4m-mvj7"
+          ]
+        },
+        {
+          "id": "CVE-2026-25645",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 4e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-gc5v-m9x4-r6x2"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/requests-unixsocket@0.2.0",
+      "name": "requests-unixsocket",
+      "version": "0.2.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/sed@4.7-1?arch=amd64&distro=ubuntu-20.04",
+      "name": "sed",
+      "version": "4.7-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/sensible-utils@0.0.12%2Bnmu1?arch=all&distro=ubuntu-20.04",
+      "name": "sensible-utils",
+      "version": "0.0.12%2Bnmu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/setuptools@45.2.0",
+      "name": "setuptools",
+      "version": "45.2.0",
+      "uniqueVulnCount": 3,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-40897",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00513,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-r9hx-vwmv-q579",
+            "PYSEC-2022-43012"
+          ]
+        },
+        {
+          "id": "CVE-2024-6345",
+          "cvss": 8.8,
+          "severity": "HIGH",
+          "epss": 0.05553,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-cx63-2mw6-8hw5"
+          ]
+        },
+        {
+          "id": "CVE-2025-47273",
+          "cvss": 8.8,
+          "severity": "HIGH",
+          "epss": 0.00487,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-5rjg-fvgr-3xxf",
+            "PYSEC-2025-49"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/shared-mime-info@1.15-1?arch=amd64&distro=ubuntu-20.04",
+      "name": "shared-mime-info",
+      "version": "1.15-1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/sigs.k8s.io/json@v0.0.0-20221116044647-bc3834ca7abd",
+      "name": "json",
+      "version": "v0.0.0-20221116044647-bc3834ca7abd",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/sigs.k8s.io/structured-merge-diff/v4@v4.4.1",
+      "name": "v4",
+      "version": "v4.4.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/sigs.k8s.io/yaml@v1.4.0",
+      "name": "yaml",
+      "version": "v1.4.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/six@1.14.0",
+      "name": "six",
+      "version": "1.14.0",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/software-properties-common@0.99.9.12?arch=all&distro=ubuntu-20.04&upstream=software-properties",
+      "name": "software-properties-common",
+      "version": "0.99.9.12",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/stdlib@1.23.8",
+      "name": "stdlib",
+      "version": "1.23.8",
+      "uniqueVulnCount": 24,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-0913",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00015,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-3750"
+          ]
+        },
+        {
+          "id": "CVE-2025-22873",
+          "cvss": 3.8,
+          "severity": "LOW",
+          "epss": 4e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4403"
+          ]
+        },
+        {
+          "id": "CVE-2025-4673",
+          "cvss": 6.8,
+          "severity": "MEDIUM",
+          "epss": 0.00021,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-3751"
+          ]
+        },
+        {
+          "id": "CVE-2025-47906",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00028,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-3956"
+          ]
+        },
+        {
+          "id": "CVE-2025-47907",
+          "cvss": 7.0,
+          "severity": "HIGH",
+          "epss": 0.00012,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-3849"
+          ]
+        },
+        {
+          "id": "CVE-2025-47912",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00022,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4010"
+          ]
+        },
+        {
+          "id": "CVE-2025-58183",
+          "cvss": 4.3,
+          "severity": "MEDIUM",
+          "epss": 0.00012,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4014"
+          ]
+        },
+        {
+          "id": "CVE-2025-58185",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00023,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4011"
+          ]
+        },
+        {
+          "id": "CVE-2025-58186",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00028,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4012"
+          ]
+        },
+        {
+          "id": "CVE-2025-58187",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00013,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4007"
+          ]
+        },
+        {
+          "id": "CVE-2025-58188",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 6e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4013"
+          ]
+        },
+        {
+          "id": "CVE-2025-58189",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 9e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4008"
+          ]
+        },
+        {
+          "id": "CVE-2025-61723",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00027,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4009"
+          ]
+        },
+        {
+          "id": "CVE-2025-61724",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 0.00016,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4015"
+          ]
+        },
+        {
+          "id": "CVE-2025-61725",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00028,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4006"
+          ]
+        },
+        {
+          "id": "CVE-2025-61726",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00032,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4341"
+          ]
+        },
+        {
+          "id": "CVE-2025-61727",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00011,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4175"
+          ]
+        },
+        {
+          "id": "CVE-2025-61728",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00022,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4342"
+          ]
+        },
+        {
+          "id": "CVE-2025-61729",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00022,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2025-4155"
+          ]
+        },
+        {
+          "id": "CVE-2025-61730",
+          "cvss": 5.3,
+          "severity": "MEDIUM",
+          "epss": 8e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4340"
+          ]
+        },
+        {
+          "id": "CVE-2025-68121",
+          "cvss": 10.0,
+          "severity": "CRITICAL",
+          "epss": 0.00017,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4337"
+          ]
+        },
+        {
+          "id": "CVE-2026-25679",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00031,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4601"
+          ]
+        },
+        {
+          "id": "CVE-2026-27139",
+          "cvss": 2.5,
+          "severity": "LOW",
+          "epss": 5e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4602"
+          ]
+        },
+        {
+          "id": "CVE-2026-27142",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 0.00011,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GO-2026-4603"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/systemd@245.4-4ubuntu3.24?arch=amd64&distro=ubuntu-20.04",
+      "name": "systemd",
+      "version": "245.4-4ubuntu3.24",
+      "uniqueVulnCount": 5,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2020-13776",
+          "cvss": 6.7,
+          "severity": "MEDIUM",
+          "epss": 0.00258,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2020-13776"
+          ]
+        },
+        {
+          "id": "CVE-2023-26604",
+          "cvss": 7.8,
+          "severity": "HIGH",
+          "epss": 0.05624,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2023-26604"
+          ]
+        },
+        {
+          "id": "CVE-2023-7008",
+          "cvss": 5.9,
+          "severity": "MEDIUM",
+          "epss": 0.00439,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2023-7008"
+          ]
+        },
+        {
+          "id": "CVE-2025-4598",
+          "cvss": 4.7,
+          "severity": "MEDIUM",
+          "epss": 0.001,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-4598",
+            "USN-7559-1"
+          ]
+        },
+        {
+          "id": "CVE-2026-29111",
+          "cvss": 5.5,
+          "severity": "MEDIUM",
+          "epss": 0.00011,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2026-29111",
+            "USN-8119-2"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/systemd-sysv@245.4-4ubuntu3.24?arch=amd64&distro=ubuntu-20.04&upstream=systemd",
+      "name": "systemd-sysv",
+      "version": "245.4-4ubuntu3.24",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/systemd-timesyncd@245.4-4ubuntu3.24?arch=amd64&distro=ubuntu-20.04&upstream=systemd",
+      "name": "systemd-timesyncd",
+      "version": "245.4-4ubuntu3.24",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/sysvinit-utils@2.96-2.1ubuntu1?arch=amd64&distro=ubuntu-20.04&upstream=sysvinit",
+      "name": "sysvinit-utils",
+      "version": "2.96-2.1ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:golang/tags.cncf.io/container-device-interface@v1.0.1",
+      "name": "container-device-interface",
+      "version": "v1.0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/tar@1.30%2Bdfsg-7ubuntu0.20.04.4?arch=amd64&distro=ubuntu-20.04",
+      "name": "tar",
+      "version": "1.30%2Bdfsg-7ubuntu0.20.04.4",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-45582",
+          "cvss": 4.1,
+          "severity": "MEDIUM",
+          "epss": 0.00073,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-45582"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/tzdata@2025b-0ubuntu0.20.04.1?arch=all&distro=ubuntu-20.04",
+      "name": "tzdata",
+      "version": "2025b-0ubuntu0.20.04.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/ubuntu-keyring@2020.02.11.4?arch=all&distro=ubuntu-20.04",
+      "name": "ubuntu-keyring",
+      "version": "2020.02.11.4",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/ucf@3.0038%2Bnmu1?arch=all&distro=ubuntu-20.04",
+      "name": "ucf",
+      "version": "3.0038%2Bnmu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/unattended-upgrades@0.1",
+      "name": "unattended-upgrades",
+      "version": "0.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/unattended-upgrades@2.3ubuntu0.3?arch=all&distro=ubuntu-20.04",
+      "name": "unattended-upgrades",
+      "version": "2.3ubuntu0.3",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/urllib3@1.23",
+      "name": "urllib3",
+      "version": "1.23",
+      "uniqueVulnCount": 11,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2018-25091",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 0.00434,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-gwvm-45gx-3cf8",
+            "PYSEC-2023-207"
+          ]
+        },
+        {
+          "id": "CVE-2019-11236",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 0.00624,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-r64q-w8jr-g9qp",
+            "PYSEC-2019-132"
+          ]
+        },
+        {
+          "id": "CVE-2019-11324",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.01315,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-mh33-7rrq-662w",
+            "PYSEC-2019-133"
+          ]
+        },
+        {
+          "id": "CVE-2020-26137",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00903,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-wqvq-5m8c-6g24",
+            "PYSEC-2020-148"
+          ]
+        },
+        {
+          "id": "CVE-2021-33503",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00863,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "PYSEC-2021-108"
+          ]
+        },
+        {
+          "id": "CVE-2023-43804",
+          "cvss": 8.1,
+          "severity": "HIGH",
+          "epss": 0.00867,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-v845-jxx5-vc9f",
+            "PYSEC-2023-192"
+          ]
+        },
+        {
+          "id": "CVE-2023-45803",
+          "cvss": 4.2,
+          "severity": "MEDIUM",
+          "epss": 0.00051,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-g4mx-q9vg-27p4",
+            "PYSEC-2023-212"
+          ]
+        },
+        {
+          "id": "CVE-2024-37891",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00263,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-34jh-p97f-mpxf"
+          ]
+        },
+        {
+          "id": "CVE-2025-50181",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 0.00026,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-pq67-6m6q-mj2v"
+          ]
+        },
+        {
+          "id": "CVE-2025-66471",
+          "cvss": 8.9,
+          "severity": "HIGH",
+          "epss": 0.00027,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-2xpw-w6gg-jr37"
+          ]
+        },
+        {
+          "id": "CVE-2026-21441",
+          "cvss": 8.9,
+          "severity": "HIGH",
+          "epss": 0.00027,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-38jv-5279-wg99"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/urllib3@1.25.8",
+      "name": "urllib3",
+      "version": "1.25.8",
+      "uniqueVulnCount": 9,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2020-26137",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00903,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-wqvq-5m8c-6g24",
+            "PYSEC-2020-148"
+          ]
+        },
+        {
+          "id": "CVE-2021-33503",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00863,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-q2q7-5pp4-w6pg",
+            "PYSEC-2021-108"
+          ]
+        },
+        {
+          "id": "CVE-2023-43804",
+          "cvss": 8.1,
+          "severity": "HIGH",
+          "epss": 0.00867,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-v845-jxx5-vc9f",
+            "PYSEC-2023-192"
+          ]
+        },
+        {
+          "id": "CVE-2023-45803",
+          "cvss": 4.2,
+          "severity": "MEDIUM",
+          "epss": 0.00051,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-g4mx-q9vg-27p4",
+            "PYSEC-2023-212"
+          ]
+        },
+        {
+          "id": "CVE-2024-37891",
+          "cvss": 6.5,
+          "severity": "MEDIUM",
+          "epss": 0.00263,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-34jh-p97f-mpxf"
+          ]
+        },
+        {
+          "id": "CVE-2025-50181",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 0.00026,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-pq67-6m6q-mj2v"
+          ]
+        },
+        {
+          "id": "CVE-2025-66418",
+          "cvss": 8.9,
+          "severity": "HIGH",
+          "epss": 0.00029,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-gm62-xv2j-4w53"
+          ]
+        },
+        {
+          "id": "CVE-2025-66471",
+          "cvss": 8.9,
+          "severity": "HIGH",
+          "epss": 0.00027,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-2xpw-w6gg-jr37"
+          ]
+        },
+        {
+          "id": "CVE-2026-21441",
+          "cvss": 8.9,
+          "severity": "HIGH",
+          "epss": 0.00027,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-38jv-5279-wg99"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/util-linux@2.34-0.1ubuntu9.6?arch=amd64&distro=ubuntu-20.04",
+      "name": "util-linux",
+      "version": "2.34-0.1ubuntu9.6",
+      "uniqueVulnCount": 2,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2025-14104",
+          "cvss": 6.1,
+          "severity": "MEDIUM",
+          "epss": 6e-05,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "UBUNTU-CVE-2025-14104"
+          ]
+        },
+        {
+          "id": "USN-8091-1",
+          "cvss": null,
+          "severity": null,
+          "epss": null,
+          "wildExploited": false,
+          "sourceAdvisories": []
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/werkzeug@3.0.1",
+      "name": "werkzeug",
+      "version": "3.0.1",
+      "uniqueVulnCount": 6,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-34069",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.38929,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-2g68-c3qc-8985"
+          ]
+        },
+        {
+          "id": "CVE-2024-49766",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.01392,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-f9vj-2wh5-fj8j"
+          ]
+        },
+        {
+          "id": "CVE-2024-49767",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.0109,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-q34m-jh98-gwm2"
+          ]
+        },
+        {
+          "id": "CVE-2025-66221",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.00032,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-hgf8-39gv-g3f2"
+          ]
+        },
+        {
+          "id": "CVE-2026-21860",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.00022,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-87hc-h4r5-73f7"
+          ]
+        },
+        {
+          "id": "CVE-2026-27199",
+          "cvss": 6.3,
+          "severity": "MEDIUM",
+          "epss": 0.0002,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-29vq-49wr-vm6x"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:pypi/wheel@0.34.2",
+      "name": "wheel",
+      "version": "0.34.2",
+      "uniqueVulnCount": 1,
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-40898",
+          "cvss": 7.5,
+          "severity": "HIGH",
+          "epss": 0.00162,
+          "wildExploited": false,
+          "sourceAdvisories": [
+            "GHSA-qwmp-2cf2-g9g6",
+            "PYSEC-2022-43017"
+          ]
+        }
+      ]
+    },
+    {
+      "purl": "pkg:deb/ubuntu/xdg-user-dirs@0.17-2ubuntu1?arch=amd64&distro=ubuntu-20.04",
+      "name": "xdg-user-dirs",
+      "version": "0.17-2ubuntu1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/xz-utils@5.2.4-1ubuntu1.1?arch=amd64&distro=ubuntu-20.04",
+      "name": "xz-utils",
+      "version": "5.2.4-1ubuntu1.1",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:pypi/zipp@3.20.2",
+      "name": "zipp",
+      "version": "3.20.2",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/zlib1g@1%3A1.2.11.dfsg-2ubuntu1.5?arch=amd64&distro=ubuntu-20.04&upstream=zlib",
+      "name": "zlib1g",
+      "version": "1%3A1.2.11.dfsg-2ubuntu1.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    },
+    {
+      "purl": "pkg:deb/ubuntu/zlib1g-dev@1%3A1.2.11.dfsg-2ubuntu1.5?arch=amd64&distro=ubuntu-20.04&upstream=zlib",
+      "name": "zlib1g-dev",
+      "version": "1%3A1.2.11.dfsg-2ubuntu1.5",
+      "uniqueVulnCount": 0,
+      "vulnerabilities": []
+    }
+  ]
+}
