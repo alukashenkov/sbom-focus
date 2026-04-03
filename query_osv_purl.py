@@ -23,17 +23,10 @@ import urllib.request
 import urllib.error
 import urllib.parse
 
-import requests as _requests
-from dotenv import load_dotenv
-
 # ── Configuration ────────────────────────────────────────────────────
-load_dotenv()
-VULNERS_API_KEY = os.getenv("VULNERS_API_KEY")
 OSV_BATCH_URL = "https://api.osv.dev/v1/querybatch"
 OSV_VULN_URL = "https://api.osv.dev/v1/vulns"  # GET /v1/vulns/{id}
-VULNERS_ID_URL = "https://vulners.com/api/v3/search/id/"
 BATCH_SIZE = 100  # queries per batch request
-VULNERS_BATCH = 100  # CVEs per Vulners request
 SBOM_FILE = "insecure-app-image-sbom-cyclonedx.json"
 
 # ── Helpers ──────────────────────────────────────────────────────────
@@ -178,71 +171,6 @@ def dedupe_vulns(
     return result
 
 
-def fetch_vulners_scores(
-    cve_ids: list[str],
-) -> dict[str, dict]:
-    """
-    Batch-fetch EPSS, CVSS, and wild exploitation status from Vulners.
-    Returns {cve_id: {epss, cvss, severity, wild_exploited}}.
-    """
-    if not VULNERS_API_KEY:
-        print("   ⚠️  VULNERS_API_KEY not set — skipping EPSS/CVSS enrichment")
-        return {}
-
-    scores: dict[str, dict] = {}
-    total = len(cve_ids)
-    batches = (total + VULNERS_BATCH - 1) // VULNERS_BATCH
-
-    for batch_idx in range(batches):
-        start = batch_idx * VULNERS_BATCH
-        end = min(start + VULNERS_BATCH, total)
-        batch = cve_ids[start:end]
-
-        print(
-            f"\r   Vulners batch {batch_idx + 1}/{batches} "
-            f"({start + 1}-{end} of {total})...",
-            end="",
-            flush=True,
-        )
-
-        try:
-            resp = _requests.post(
-                VULNERS_ID_URL,
-                json={"id": batch, "fields": ["epss", "cvss", "enchantments"]},
-                headers={"X-Api-Key": VULNERS_API_KEY},
-                timeout=30,
-            )
-            resp.raise_for_status()
-            docs = resp.json().get("data", {}).get("documents", {})
-        except Exception as e:
-            print(f"\n   ❌ Vulners batch {batch_idx + 1} failed: {e}")
-            docs = {}
-
-        for cve_id in batch:
-            info = docs.get(cve_id, {})
-            epss_list = info.get("epss", [])
-            epss_val = epss_list[0].get("epss") if epss_list else None
-            cvss_info = info.get("cvss", {})
-            cvss_score = cvss_info.get("score") if cvss_info else None
-            severity = cvss_info.get("severity") if cvss_info else None
-
-            # Check enchantments.exploitation.wildExploited
-            ench = info.get("enchantments") or {}
-            exploitation = ench.get("exploitation") or {}
-            wild = bool(exploitation.get("wildExploited", False))
-
-            scores[cve_id] = {
-                "epss": epss_val,
-                "cvss": cvss_score,
-                "severity": severity,
-                "wild_exploited": wild,
-            }
-
-        if batch_idx < batches - 1:
-            time.sleep(0.3)
-
-    print("")
-    return scores
 
 
 # ── Main ─────────────────────────────────────────────────────────────
@@ -360,25 +288,14 @@ def main():
         else:
             purl_deduped.append((purl, []))
 
-    # ── Step 3.5: Fetch EPSS / CVSS from Vulners ─────────────────────
-    cve_list = sorted(all_canonical_cves)
-    if cve_list:
-        print(f"🔒 Fetching EPSS/CVSS for {len(cve_list)} CVEs from Vulners...")
-        vuln_scores = fetch_vulners_scores(cve_list)
-    else:
-        vuln_scores = {}
-
-    print("")
 
     # ── Step 4: Build table rows ─────────────────────────────────────
     purl_col = "PURL"
     vuln_col = "Vulnerability"
-    cvss_col = "CVSS"
-    epss_col = "EPSS"
     src_col = "Also reported as"
 
-    # Row: (purl, vuln, cvss, epss, sources) — empty tuple = separator
-    rows: list[tuple[str, str, str, str, str]] = []
+    # Row: (purl, vuln, sources) — empty tuple = separator
+    rows: list[tuple[str, str, str]] = []
 
     for purl, deduped in purl_deduped:
         count = len(deduped)
@@ -389,51 +306,27 @@ def main():
         header = f"{short}  ({count} unique)"
 
         if count == 0:
-            rows.append((header, "✅ CLEAN", "", "", ""))
+            rows.append((header, "✅ CLEAN", "", "", "", ""))
         else:
             for i, (canon, sources) in enumerate(deduped):
                 src_str = ", ".join(sources) if sources else ""
                 display_purl = header if i == 0 else ""
-
-                sinfo = vuln_scores.get(canon, {})
-                cvss_val = sinfo.get("cvss")
-                severity = sinfo.get("severity", "")
-                epss_val = sinfo.get("epss")
-                wild = sinfo.get("wild_exploited", False)
-
-                vuln_display = f"🔴 {canon}" if wild else canon
-
-                if cvss_val is not None:
-                    sev_short = severity[:1] if severity else ""
-                    cvss_str = f"{cvss_val} {sev_short}".strip()
-                else:
-                    cvss_str = ""
-
-                epss_str = f"{epss_val:.4f}" if epss_val is not None else ""
-                rows.append((display_purl, vuln_display, cvss_str, epss_str, src_str))
+                rows.append((display_purl, canon, src_str))
 
         # Separator between entries
-        rows.append(("", "", "", "", ""))
+        rows.append(("", "", ""))
 
     # Remove trailing separator
-    if rows and rows[-1] == ("", "", "", "", ""):
+    if rows and rows[-1] == ("", "", ""):
         rows.pop()
 
     # ── Step 5: Print table ──────────────────────────────────────────
     w_purl = max(len(purl_col), max((len(r[0]) for r in rows), default=0))
     w_vuln = max(len(vuln_col), max((len(r[1]) for r in rows), default=0))
-    w_cvss = max(len(cvss_col), max((len(r[2]) for r in rows), default=0))
-    w_epss = max(len(epss_col), max((len(r[3]) for r in rows), default=0))
-    w_src = max(len(src_col), max((len(r[4]) for r in rows), default=0))
+    w_src = max(len(src_col), max((len(r[2]) for r in rows), default=0))
 
-    sep = (
-        f"+-{'-' * w_purl}-+-{'-' * w_vuln}-"
-        f"+-{'-' * w_cvss}-+-{'-' * w_epss}-+-{'-' * w_src}-+"
-    )
-    hdr = (
-        f"| {purl_col:<{w_purl}} | {vuln_col:<{w_vuln}} "
-        f"| {cvss_col:<{w_cvss}} | {epss_col:<{w_epss}} | {src_col:<{w_src}} |"
-    )
+    sep = f"+-{'-' * w_purl}-+-{'-' * w_vuln}-+-{'-' * w_src}-+"
+    hdr = f"| {purl_col:<{w_purl}} | {vuln_col:<{w_vuln}} | {src_col:<{w_src}} |"
 
     raw_total = sum(len(v) for v in purl_vuln_ids.values())
 
@@ -446,17 +339,13 @@ def main():
     print(hdr)
     print(sep)
 
-    for purl_str, vid, cvss, epss, src in rows:
+    for purl_str, vid, src in rows:
         if purl_str == "" and vid == "" and src == "":
             print(
-                f"|{'-' * (w_purl + 2)}+{'-' * (w_vuln + 2)}"
-                f"+{'-' * (w_cvss + 2)}+{'-' * (w_epss + 2)}+{'-' * (w_src + 2)}|"
+                f"|{'-' * (w_purl + 2)}+{'-' * (w_vuln + 2)}+{'-' * (w_src + 2)}|"
             )
         else:
-            print(
-                f"| {purl_str:<{w_purl}} | {vid:<{w_vuln}} "
-                f"| {cvss:<{w_cvss}} | {epss:<{w_epss}} | {src:<{w_src}} |"
-            )
+            print(f"| {purl_str:<{w_purl}} | {vid:<{w_vuln}} | {src:<{w_src}} |")
 
     print(sep)
     print(
@@ -497,13 +386,8 @@ def main():
         }
 
         for canon, sources in deduped:
-            sinfo = vuln_scores.get(canon, {})
             vuln_entry = {
                 "id": canon,
-                "cvss": sinfo.get("cvss"),
-                "severity": sinfo.get("severity"),
-                "epss": sinfo.get("epss"),
-                "wildExploited": sinfo.get("wild_exploited", False),
                 "sourceAdvisories": sources,
             }
             pkg_entry["vulnerabilities"].append(vuln_entry)

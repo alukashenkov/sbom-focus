@@ -29,7 +29,7 @@ A comprehensive collection of tools to parse, analyze, and compare vulnerability
 | Category | Script | Description |
 | :--- | :--- | :--- |
 | **Consensus** | `compare_osv_grype.py` | Generates a Markdown report (`compare_osv_grype.md`) showing agreement between scanners. |
-| **Scanning** | `query_osv_purl.py` | Performs batch OSV API scans of all PURLs in an SBOM with Optional Vulners enrichment. |
+| **Scanning** | `query_osv_purl.py` | Performs batch OSV API scans of all PURLs in an SBOM. |
 | **Analysis** | `parse_sbom_cdxlib.py` | Visualizes container layer stacking, ecosystem breakdown, and identifier coverage using `rich`. |
 | **On-Demand** | `compare_purl_cpe_query.py` | Triplet comparison: compares NVD, OSV, and CIRCL data for a specific PURL or CPE. |
 
@@ -73,9 +73,12 @@ pip install cyclonedx-python-lib rich pandas requests python-dotenv
 Create a `.env` file in the root directory to enable API-dependent features:
 
 ```env
-# Optional: Used by query_osv_purl.py for EPSS/CVSS enrichment
+# Optional: Used by compare_osv_grype.py
 VULNERS_API_KEY=your_api_key_here
 ```
+
+> [!NOTE]
+> Both **Free** and **Trial/Commercial** Vulners API keys are supported. However, the **Free tier** does not provide KEV (Known Exploited Vulnerabilities) status or detailed exploit counts; these fields will show as `n/a` or be hidden in reports if no data is available.
 
 ## 📖 Usage
 
@@ -130,10 +133,12 @@ The tools provide a visual representation of scanner agreement and EPSS (Exploit
 
 ```text
   ┌─ golang.org/x/crypto@v0.37.0
-  │ OG
-  │ ✔✘ CVE-2025-47913         HIGH     7.5  EPSS:0.00039  ↳ O:GO-2025-4116
-  │ ✔✔ CVE-2025-47914         MEDIUM   5.3  EPSS:0.00021  ↳ O:GHSA-f6x5-jh6r-wrfv,...
-  └───────────────────────────────────────────────────────────────────
+  │ O G  Vulnerability          Severity    CVSS  EPSS
+  │ ✔✘ CVE-2025-47913         HIGH         7.5   EPSS:0.00039
+  │        ↳ O:GO-2025-4116
+  │ ✔✔ CVE-2025-47914         MEDIUM       5.3   EPSS:0.00021
+  │        ↳ O:GHSA-f6x5-jh6r-wrfv,PYSEC-2024-123
+  └────────────────────────────────────────────────────────────────────────────────
 ```
 
 ## 📄 License

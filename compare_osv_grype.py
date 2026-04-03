@@ -17,7 +17,17 @@ import re
 import subprocess
 import sys
 import urllib.parse
+import time
 from collections import defaultdict
+
+import requests as _requests
+from dotenv import load_dotenv
+
+# ── Configuration ────────────────────────────────────────────────────
+load_dotenv()
+VULNERS_API_KEY = os.getenv("VULNERS_API_KEY")
+VULNERS_ID_URL = "https://vulners.com/api/v3/search/id/"
+VULNERS_BATCH = 100  # CVEs per Vulners request
 
 # ── Input files (all derived from the same SBOM) ─────────────────────────
 SBOM_FILE = "insecure-app-image-sbom-cyclonedx.json"
@@ -103,6 +113,110 @@ def normalize_version(v: str) -> str:
     if v.startswith("go"):
         v = v[2:]
     return v
+
+
+def fetch_vulners_scores(cve_ids: list[str]) -> dict[str, dict]:
+    """
+    Batch-fetch EPSS, CVSS, KEV, and exploit count from Vulners.
+    Returns {cve_id: {epss, cvss, severity, wild_exploited, exploits_num, kev}}.
+    """
+    if not VULNERS_API_KEY:
+        print(f"   {YELLOW}⚠️  VULNERS_API_KEY not set — skipping enrichment{RESET}")
+        return {}
+
+    scores: dict[str, dict] = {}
+    total = len(cve_ids)
+    batches = (total + VULNERS_BATCH - 1) // VULNERS_BATCH
+
+    for batch_idx in range(batches):
+        start = batch_idx * VULNERS_BATCH
+        end = min(start + VULNERS_BATCH, total)
+        batch = cve_ids[start:end]
+
+        print(
+            f"\r   Enriching Vulners batch {batch_idx + 1}/{batches}...",
+            end="",
+            flush=True,
+        )
+
+        try:
+            resp = _requests.post(
+                VULNERS_ID_URL,
+                json={
+                    "id": batch,
+                    "fields": [
+                        "epss",
+                        "cvss",
+                        "enchantments",
+                        "exploits",
+                        "vulnStatus",
+                    ],
+                },
+                headers={"X-Api-Key": VULNERS_API_KEY},
+                timeout=30,
+            )
+            resp.raise_for_status()
+
+            raw_data = resp.json()
+            docs = raw_data.get("data", {}).get("documents", {})
+        except Exception as e:
+            print(f"\n   ❌ Vulners enrichment failed: {e}")
+            docs = {}
+
+        for cve_id in batch:
+            info = docs.get(cve_id) or docs.get(f"CVELIST:{cve_id}") or {}
+
+            # EPSS
+            epss_list = info.get("epss", [])
+            epss_val = (
+                epss_list[0].get("epss")
+                if epss_list and isinstance(epss_list, list)
+                else None
+            )
+
+            # CVSS
+            cvss_info = info.get("cvss", {})
+            if isinstance(cvss_info, dict):
+                cvss_score = cvss_info.get("score")
+                severity = cvss_info.get("severity")
+            elif isinstance(cvss_info, (int, float)):
+                cvss_score = float(cvss_info)
+                severity = None
+            else:
+                cvss_score = severity = None
+
+            # Exploitation & KEV
+            ench = info.get("enchantments") or {}
+            exploitation = ench.get("exploitation") or {}
+            wild = bool(exploitation.get("wildExploited", False))
+            kev = bool(ench.get("kev", False))
+
+            # Exploit count (n/a for free tier)
+            if "exploits" in info:
+                exploits = info.get("exploits", [])
+                exploits_num = len(exploits) if isinstance(exploits, list) else 0
+            else:
+                exploits_num = "n/a"
+
+            # Rejection status
+            status = info.get("vulnStatus")
+            is_rejected = status == "Rejected"
+
+            scores[cve_id] = {
+                "epss": epss_val,
+                "cvss": cvss_score,
+                "severity": severity,
+                "wild_exploited": wild,
+                "exploits_num": exploits_num,
+                "kev": kev,
+                "is_rejected": is_rejected,
+            }
+
+        if batch_idx < batches - 1:
+            time.sleep(0.3)
+
+    print("")
+    return scores
 
 
 # ── Loaders ───────────────────────────────────────────────────────────────
@@ -284,8 +398,6 @@ def load_grype(path: str):
     return packages, vulns
 
 
-
-
 # ── Build reverse map (name,version) → PURL ──────────────────────────────
 
 
@@ -314,6 +426,8 @@ def sev_colour(severity):
     if not severity:
         return DIM
     s = severity.upper()
+    if s == "REJECTED":
+        return RED + BOLD
     if s == "CRITICAL":
         return RED + BOLD
     elif s == "HIGH":
@@ -540,10 +654,7 @@ def run_report():
     vuln_purls = set()
     clean_purls = set()
     for purl in all_purls:
-        if (
-            osv_vulns.get(purl)
-            or grype_vulns.get(purl)
-        ):
+        if osv_vulns.get(purl) or grype_vulns.get(purl):
             vuln_purls.add(purl)
         else:
             clean_purls.add(purl)
@@ -602,6 +713,21 @@ def run_report():
     for s in sets:
         all_vuln_ids.update(s)
 
+    # 3. Enrich consolidated CVEs
+    cve_list = sorted([v for v in all_vuln_ids if v.startswith("CVE-")])
+    if cve_list:
+        section_header("Vulnerability Enrichment")
+        print(f"  Fetching metadata for {len(cve_list)} unique CVEs from Vulners...")
+        vuln_scores = fetch_vulners_scores(cve_list)
+    else:
+        vuln_scores = {}
+
+    # Check if we have any exploit counts to display
+    any_exploits = any(
+        isinstance(v.get("exploits_num"), int) and v.get("exploits_num") > 0
+        for v in vuln_scores.values()
+    )
+
     # ── Report Generation ────────────────────────────────────────────────
     print("# Vulnerability Comparison Report")
 
@@ -612,15 +738,23 @@ def run_report():
     print(f"  Vulnerable:            {len(vuln_purls)}")
     print()
     # SUMMARY table rows
+    h_scanner = col(f"{'Scanner':<12}", BOLD)
+    h_scanned = col(f"{'Pkgs Scanned':<14}", BOLD)
+    h_vulns = col(f"{'Pkgs w/ Vulns':<14}", BOLD)
+    h_total = col(f"{'Total Vuln IDs':<15}", BOLD)
+
+    print(f"  {h_scanner} | {h_scanned} | {h_vulns} | {h_total}")
+
+    def fmt_summary_row(name, scanned, vulns, total):
+        return f"  {name:<12} | {scanned:<14} | {vulns:<14} | {total:<15}"
+
     print(
-        f"  {col('Scanner', BOLD):<18} | {col('Pkgs Scanned', BOLD):<18} | {col('Pkgs w/ Vulns', BOLD):<18} | {col('Total Vuln IDs', BOLD):<15}"
+        fmt_summary_row("OSV", len(osv_scanned_pkgs), len(osv_detected), len(osv_total))
     )
-    # Removing hline in Markdown for cleaner output
     print(
-        f"  {'OSV':<18} | {len(osv_scanned_pkgs):<18} | {len(osv_detected):<18} | {len(osv_total):<15}"
-    )
-    print(
-        f"  {'Grype':<18} | {len(grype_scanned_pkgs):<18} | {len(grype_detected):<18} | {len(grype_total):<15}"
+        fmt_summary_row(
+            "Grype", len(grype_scanned_pkgs), len(grype_detected), len(grype_total)
+        )
     )
 
     cve_count = sum(1 for v in all_vuln_ids if v.startswith("CVE-"))
@@ -659,7 +793,7 @@ def run_report():
 
         for purl in purls:
             # Marks on the left (4 indent + 3 marks + 2 space + 70 purl = 79)
-            dp = purl if len(purl) <= 70 else purl[:67] + "..."
+            dp = purl
             marks = [
                 check_mark(purl in osv_detected),
                 check_mark(purl in grype_detected),
@@ -673,9 +807,28 @@ def run_report():
     section_header("VULNERABILITY DETAIL — All Scanner Findings")
     print("  Shows all vulnerabilities discovered and scanner agreement status.")
 
-    # Dynamic column header for detail section
-    detail_header = f"  {col('O', BOLD)}SV {col('G', BOLD)}rype"
-    detail_header += f"        {col('EPSS', MAGENTA)}  {col('↳ provenance', MAGENTA)}"
+    # Define columns for consistent alignment
+    col_vuln = "Vulnerability"
+    col_sev = "Severity"
+    col_cvss = "CVSS"
+    col_epss = "EPSS"
+    col_kev = "KEV"
+    col_expl = "Expl"
+
+    # Header prefix matches "  │ O G  " (Visible width info: 2+1+1+1+2 = 7)
+    header_prefix = f"  {col('O', BOLD)} {col('G', BOLD)}  "
+    header_fields = [
+        f"{col_vuln:<22}",
+        f"{col_sev:<10}",
+        f"{col_cvss:>5} ",
+        f"{col(f'{col_epss:<12}', MAGENTA)}",
+    ]
+    if any_exploits:
+        header_fields.append(f"{col(f'{col_kev:<5}', RED)}")
+        header_fields.append(f"{col(f'{col_expl:<4}', YELLOW)}")
+
+    header_cols = " ".join(header_fields)
+    detail_header = header_prefix + header_cols
 
     print(detail_header)
 
@@ -684,10 +837,7 @@ def run_report():
         # Check if any package in this eco has vulnerabilities
         has_any = False
         for purl in purls:
-            if (
-                purl in osv_detected
-                or purl in grype_detected
-            ):
+            if purl in osv_detected or purl in grype_detected:
                 has_any = True
                 break
         if not has_any:
@@ -701,10 +851,7 @@ def run_report():
             osv_v = osv_vulns.get(purl, {})
             grype_v = grype_vulns.get(purl, {})
 
-            all_vids = (
-                set(osv_v.keys())
-                | set(grype_v.keys())
-            )
+            all_vids = set(osv_v.keys()) | set(grype_v.keys())
             if not all_vids:
                 continue
 
@@ -726,14 +873,11 @@ def run_report():
 
             print(col(f"  ┌─ {display_name}@{display_ver}", BOLD + WHITE))
 
-            # Print indicator header for the vulns
-            indicator_labels = [col("O", BOLD), col("G", BOLD)]
-            print(f"  │ {''.join(indicator_labels)}")
-
             for vid in sorted(to_display, key=vid_sort_key):
                 in_osv = vid in osv_v
                 in_grype = vid in grype_v
 
+                # Fallback to scanner data if Vulners enrichment is unavailable
                 severity = cvss = epss = None
                 for source in (osv_v, grype_v):
                     if vid in source:
@@ -744,19 +888,59 @@ def run_report():
                         if epss is None:
                             epss = source[vid].get("epss")
 
+                sev_info = vuln_scores.get(vid, {})
+                severity = sev_info.get("severity") or severity
+                cvss = (
+                    sev_info.get("cvss") if sev_info.get("cvss") is not None else cvss
+                )
+                epss = (
+                    sev_info.get("epss") if sev_info.get("epss") is not None else epss
+                )
+                kev = sev_info.get("kev", False)
+                expl = sev_info.get("exploits_num", "n/a")
+                wild = sev_info.get("wild_exploited", False)
+                is_rejected = sev_info.get("is_rejected", False)
+
                 sev_str = (severity or "?").upper()
-                sev_display = col(f"{sev_str:<6}", sev_colour(severity))
-                cvss_display = f"{cvss:.1f}" if cvss is not None else " - "
+                if is_rejected:
+                    sev_str = "REJECTED"
+
+                # Pad to 10 characters for consistent alignment before coloring
+                sev_display = col(f"{sev_str:<10}", sev_colour(sev_str))
+                # Pad score to 5 characters (e.g. ' 10.0' or '  9.1')
+                cvss_display = f"{cvss:>5.1f}" if cvss is not None else "  -  "
                 try:
-                    raw_epss = f"EPSS:{float(epss):.5f}" if epss is not None else " " * 12
+                    raw_epss = (
+                        f"EPSS:{float(epss):.5f}" if epss is not None else " " * 12
+                    )
                 except (ValueError, TypeError):
                     raw_epss = f"EPSS:{str(epss):<5}" if epss is not None else " " * 12
-                
+
                 epss_display = col(raw_epss, CYAN) if epss is not None else raw_epss
 
+                kev_mark = col(" KEV ", RED + BOLD) if kev else "     "
+
+                if isinstance(expl, int):
+                    expl_display = f"{expl:<4}" if expl > 0 else "    "
+                else:
+                    expl_display = f"{expl:<4}"
+
+                expl_display = (
+                    col(expl_display, YELLOW) if expl != "    " else expl_display
+                )
+
                 # Build dynamic marks
-                marks_list = [check_mark(in_osv), check_mark(in_grype)]
-                marks = "".join(marks_list)
+                m_osv = col("✔", GREEN) if in_osv else col("✘", RED)
+                m_grype = col("✔", GREEN) if in_grype else col("✘", RED)
+
+                # Apply "wild" indicator to CVE ID; pad to 22 BEFORE coloring
+                display_vid = vid
+                if is_rejected:
+                    display_vid = f"{vid} [R] "
+                raw_vid = f"{display_vid:<22}"
+                vid_display = (
+                    col(raw_vid, RED + BOLD) if wild or is_rejected else raw_vid
+                )
 
                 prov_bits = []
                 for label, src, flag in [
@@ -767,18 +951,30 @@ def run_report():
                         prov_bits.append(
                             f"{label}:{','.join(src[vid]['sourceAdvisories'])}"
                         )
-                prov_content = " | ".join(prov_bits)
-                if len(prov_content) > 25:
-                    prov_content = prov_content[:22] + "..."
+                prov_str = ""
+                if prov_bits:
+                    prov_content = " | ".join(prov_bits)
+                    prov_str = col(f"  ↳ {prov_content}", MAGENTA)
 
-                prov_str = col(f"  ↳ {prov_content}", MAGENTA) if prov_bits else ""
+                row_fields = [
+                    f"{m_osv}{m_grype}",
+                    vid_display,
+                    sev_display,
+                    cvss_display,
+                    " ",  # spacer
+                    epss_display,
+                ]
+                if any_exploits:
+                    row_fields.append(kev_mark)
+                    row_fields.append(expl_display)
 
-                print(
-                    f"  │ {marks} {vid:<22} {sev_display:<9} {cvss_display:>5}  {epss_display}{prov_str}"
-                )
+                print(f"  │ {' '.join(row_fields)}")
+                if prov_str:
+                    # Align with the CVE ID column
+                    print(f"  │      {prov_str}")
 
-            # Adjusted width for two scanners
-            print(f"  └{'─' * 67}")
+            # Standardized footer width
+            print(f"  └{'─' * 80}")
 
 
 class DualOutput:
@@ -789,21 +985,35 @@ class DualOutput:
         self.file = open(file_path, "w", encoding="utf-8")
         self.ansi_escape = re.compile(r"\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])")
         self.buffer = ""
+        self.recording = False  # Only start writing to file after report header
 
     def write(self, message):
         self.terminal.write(message)
-        # Add to buffer and write completed lines rstripped
-        self.buffer += self.ansi_escape.sub("", message)
+
+        # Skip interactive progress indicators (carriage returns) in the file
+        if "\r" in message:
+            return
+
+        clean = self.ansi_escape.sub("", message)
+        self.buffer += clean
+
         while "\n" in self.buffer:
             line, self.buffer = self.buffer.split("\n", 1)
-            self.file.write(line.rstrip() + "\n")
+
+            # Detect the report header to begin recording
+            if "# Vulnerability Comparison Report" in line:
+                self.recording = True
+
+            if self.recording:
+                self.file.write(line.rstrip() + "\n")
 
     def flush(self):
         self.terminal.flush()
-        self.file.flush()
+        if self.recording:
+            self.file.flush()
 
     def close(self):
-        if self.buffer:
+        if self.buffer and self.recording:
             self.file.write(self.buffer.rstrip() + "\n")
         self.file.close()
 
