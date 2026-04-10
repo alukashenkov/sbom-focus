@@ -2,10 +2,15 @@
 
 A comprehensive collection of tools to parse, analyze, and compare vulnerability scan results for CycloneDX SBOM (Software Bill of Materials) files, specifically optimized for container image security and compliance research.
 
+## 🏆 Core Deliverable
+
+- **[Presentation: SBOM Focus in CRA (PDF)](NSSS-SBOM-to-CRA.pdf)**: The primary presentation outlining the bridge between SBOM analysis and the EU Cyber Resilience Act (CRA) requirements. This repository provides the technical foundation and validation suite for the research presented.
+
 ## 📁 Project Structure
 
 ```text
 .
+├── 📄 NSSS-SBOM-to-CRA.pdf      # Core Presentation: SBOM focus in CRA
 ├── 🚀 Core Tools
 │   ├── compare_osv_grype.py     # Scanner consensus (OSV vs Grype)
 │   ├── query_osv_purl.py        # Batch OSV API scanning
